@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		4604F9801FC44F3E00C5D59F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4604F97F1FC44F3E00C5D59F /* main.m */; };
 		4604F9831FC44F3E00C5D59F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4604F9821FC44F3E00C5D59F /* AppDelegate.m */; };
-		4604F9861FC44F3E00C5D59F /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4604F9851FC44F3E00C5D59F /* FirstViewController.m */; };
-		4604F9891FC44F3E00C5D59F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4604F9881FC44F3E00C5D59F /* SecondViewController.m */; };
+		4604F9861FC44F3E00C5D59F /* StopwatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4604F9851FC44F3E00C5D59F /* StopwatchViewController.m */; };
+		4604F9891FC44F3E00C5D59F /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4604F9881FC44F3E00C5D59F /* TimerViewController.m */; };
 		4604F98C1FC44F3E00C5D59F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4604F98A1FC44F3E00C5D59F /* Main.storyboard */; };
 		4604F98E1FC44F3F00C5D59F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4604F98D1FC44F3F00C5D59F /* Assets.xcassets */; };
 		4604F9911FC44F3F00C5D59F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4604F98F1FC44F3F00C5D59F /* LaunchScreen.storyboard */; };
@@ -40,10 +40,10 @@
 		4604F97F1FC44F3E00C5D59F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4604F9811FC44F3E00C5D59F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4604F9821FC44F3E00C5D59F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4604F9841FC44F3E00C5D59F /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		4604F9851FC44F3E00C5D59F /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		4604F9871FC44F3E00C5D59F /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		4604F9881FC44F3E00C5D59F /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		4604F9841FC44F3E00C5D59F /* StopwatchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StopwatchViewController.h; sourceTree = "<group>"; };
+		4604F9851FC44F3E00C5D59F /* StopwatchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StopwatchViewController.m; sourceTree = "<group>"; };
+		4604F9871FC44F3E00C5D59F /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		4604F9881FC44F3E00C5D59F /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		4604F98B1FC44F3E00C5D59F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4604F98D1FC44F3F00C5D59F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4604F9901FC44F3F00C5D59F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,10 +106,10 @@
 			children = (
 				4604F9811FC44F3E00C5D59F /* AppDelegate.h */,
 				4604F9821FC44F3E00C5D59F /* AppDelegate.m */,
-				4604F9841FC44F3E00C5D59F /* FirstViewController.h */,
-				4604F9851FC44F3E00C5D59F /* FirstViewController.m */,
-				4604F9871FC44F3E00C5D59F /* SecondViewController.h */,
-				4604F9881FC44F3E00C5D59F /* SecondViewController.m */,
+				4604F9841FC44F3E00C5D59F /* StopwatchViewController.h */,
+				4604F9851FC44F3E00C5D59F /* StopwatchViewController.m */,
+				4604F9871FC44F3E00C5D59F /* TimerViewController.h */,
+				4604F9881FC44F3E00C5D59F /* TimerViewController.m */,
 				4604F98A1FC44F3E00C5D59F /* Main.storyboard */,
 				4604F98D1FC44F3F00C5D59F /* Assets.xcassets */,
 				4604F98F1FC44F3F00C5D59F /* LaunchScreen.storyboard */,
@@ -278,9 +278,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4604F9891FC44F3E00C5D59F /* SecondViewController.m in Sources */,
+				4604F9891FC44F3E00C5D59F /* TimerViewController.m in Sources */,
 				4604F9831FC44F3E00C5D59F /* AppDelegate.m in Sources */,
-				4604F9861FC44F3E00C5D59F /* FirstViewController.m in Sources */,
+				4604F9861FC44F3E00C5D59F /* StopwatchViewController.m in Sources */,
 				4604F9801FC44F3E00C5D59F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,6 +513,7 @@
 				4604F9AD1FC44F3F00C5D59F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4604F9AE1FC44F3F00C5D59F /* Build configuration list for PBXNativeTarget "MultipleStopwatchTimerTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +522,7 @@
 				4604F9B01FC44F3F00C5D59F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4604F9B11FC44F3F00C5D59F /* Build configuration list for PBXNativeTarget "MultipleStopwatchTimerUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +531,7 @@
 				4604F9B31FC44F3F00C5D59F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

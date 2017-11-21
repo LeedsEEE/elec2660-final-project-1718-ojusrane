@@ -6,13 +6,13 @@
 //  Copyright © 2017 Ojus Rane [el16or]. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "TimerViewController.h"
 
-@interface SecondViewController ()
+@interface TimerViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation TimerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
