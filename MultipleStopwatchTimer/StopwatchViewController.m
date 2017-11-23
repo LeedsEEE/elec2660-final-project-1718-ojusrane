@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.StopwatchLabelOne.text = @"00:00:00";
+    self.StopwatchLabelOne.text = @"00:00:00:00";
     RunningStopwatchOne = NO;
     CountStopwatchone = 0;
     
@@ -32,41 +32,47 @@
 
 
 - (IBAction)StartButtonOnePressed:(UIButton *)sender {
-    if (RunningStopwatchOne == NO){
+    if (RunningStopwatchOne == NO) {
         RunningStopwatchOne = YES;
         [_StartButtonOne setTitle:@"Stop" forState:UIControlStateNormal];
         
         if (StopwatchOne == nil){
             StopwatchOne = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(updateStopwatchOne) userInfo:nil repeats:YES];
         }
+    }
         else {
-            RunningStopwatchOne = NO;
-            [StopwatchOne invalidate];
-            StopwatchOne = nil;
-            [_StartButtonOne setTitle:@"Start" forState:UIControlStateNormal];
+            [self STOPStopwatchOne];
         }
     }
-}
+
 
 - (IBAction)ResetButtonOnePressed:(UIButton *)sender {
+    [self STOPStopwatchOne];
+    CountStopwatchone = 0;
+    self.StopwatchLabelOne.text = @"00:00:00:00";
+    
 }
 
 - (void) updateStopwatchOne{
     CountStopwatchone ++;
     
-    int min = floor(CountStopwatchone/100/60);
-    int sec = floor(CountStopwatchone/100);
-    int mSec = CountStopwatchone % 100;
+    int Hours_StopwatchOne = floor(CountStopwatchone/100/3600);
+    int Minutes_StopwatchOne = floor(CountStopwatchone/100/60);
+    int Seconds_StopwatchOne = floor(CountStopwatchone/100);
+    int Milliseconds_StopwatchOne = CountStopwatchone % 100;
     
-    if (sec >=60){
-        sec = sec % 60;
+    if (Seconds_StopwatchOne >=60){
+        Seconds_StopwatchOne = Seconds_StopwatchOne % 60;
     }
     
-    self.StopwatchLabelOne.text = [NSString stringWithFormat:@"%02d:%02d:%02d",min,sec,mSec];
+    self.StopwatchLabelOne.text = [NSString stringWithFormat:@"%02d:%02d:%02d:%02d", Hours_StopwatchOne,Minutes_StopwatchOne,Seconds_StopwatchOne,Milliseconds_StopwatchOne];
     
 }
 - (void) STOPStopwatchOne{
-    
+    RunningStopwatchOne = NO;
+    [StopwatchOne invalidate];
+    StopwatchOne = nil;
+    [_StartButtonOne setTitle:@"Start" forState:UIControlStateNormal];
 }
 
 @end

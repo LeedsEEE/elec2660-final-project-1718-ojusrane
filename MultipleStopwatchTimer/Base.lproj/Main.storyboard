@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -24,11 +24,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uD6-fp-Zho">
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wg7-rx-kfQ">
                                 <state key="normal" title="Start"/>
                                 <connections>
@@ -46,11 +41,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uD6-fp-Zho">
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="AdW-dg-R04" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="88" id="3bh-CK-9zH"/>
-                            <constraint firstItem="uD6-fp-Zho" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="78" id="9Ae-og-btg"/>
+                            <constraint firstItem="uD6-fp-Zho" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="68" id="9Ae-og-btg"/>
                             <constraint firstItem="wg7-rx-kfQ" firstAttribute="top" secondItem="uD6-fp-Zho" secondAttribute="bottom" constant="25" id="FOw-U7-8Do"/>
                             <constraint firstItem="AdW-dg-R04" firstAttribute="top" secondItem="0al-yG-ALR" secondAttribute="bottom" constant="31.5" id="HbN-hg-bKa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ksM-Fy-wnN" secondAttribute="trailing" constant="72" id="Hyy-Fv-hat"/>
@@ -58,7 +58,7 @@
                             <constraint firstItem="wg7-rx-kfQ" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="68" id="d8w-5a-7OY"/>
                             <constraint firstItem="uD6-fp-Zho" firstAttribute="top" secondItem="AdW-dg-R04" secondAttribute="bottom" constant="8" id="feq-6c-Pjh"/>
                             <constraint firstItem="0al-yG-ALR" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="-294.5" id="iFr-ij-Sgf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uD6-fp-Zho" secondAttribute="trailing" constant="83" id="qDn-zc-xOG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uD6-fp-Zho" secondAttribute="trailing" constant="67" id="qDn-zc-xOG"/>
                             <constraint firstItem="0al-yG-ALR" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="vjl-XD-CAE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AdW-dg-R04" secondAttribute="trailing" constant="88" id="waS-Pb-Dy0"/>
                         </constraints>
