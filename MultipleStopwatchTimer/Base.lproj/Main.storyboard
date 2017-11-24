@@ -24,6 +24,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uD6-fp-Zho">
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wg7-rx-kfQ">
                                 <state key="normal" title="Start"/>
                                 <connections>
@@ -41,11 +46,72 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uD6-fp-Zho">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxg-ih-pIM">
+                                <frame key="frameInset" minX="84" minY="296" width="208" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Stopwatch name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ekO-IY-Lo0">
+                                <frame key="frameInset" minX="104" minY="259" width="167" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFX-ed-w4v">
+                                <frame key="frameInset" minX="84" minY="362" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="StartButtonTwoPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="aSI-xH-rUf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfb-hX-v4b">
+                                <frame key="frameInset" minX="248" minY="362" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="ResetButtonTwoPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="cY9-25-v15"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDj-Rf-zkN">
+                                <frame key="frameInset" minX="84" minY="467" width="208" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Stopwatch name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdu-wo-CLH">
+                                <frame key="frameInset" minX="104" minY="430" width="167" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FW8-ne-3cy">
+                                <frame key="frameInset" minX="84" minY="533" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="StartButtonThreePressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="sTj-mN-iw1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPo-26-urz">
+                                <frame key="frameInset" minX="248" minY="533" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="ResetButtonThreePressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="8FH-4y-S9D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1a-5d-iUd">
+                                <state key="normal" title="Reset All Stopwatches"/>
+                                <connections>
+                                    <action selector="ResetAllStopwatchesButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="eri-LZ-y1m"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -55,10 +121,13 @@
                             <constraint firstItem="AdW-dg-R04" firstAttribute="top" secondItem="0al-yG-ALR" secondAttribute="bottom" constant="31.5" id="HbN-hg-bKa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ksM-Fy-wnN" secondAttribute="trailing" constant="72" id="Hyy-Fv-hat"/>
                             <constraint firstItem="ksM-Fy-wnN" firstAttribute="top" secondItem="uD6-fp-Zho" secondAttribute="bottom" constant="25" id="Jfg-ub-Blx"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="c1a-5d-iUd" secondAttribute="bottom" constant="20" id="QlN-QF-4VY"/>
+                            <constraint firstItem="c1a-5d-iUd" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="96" id="aE8-Mh-Z0W"/>
                             <constraint firstItem="wg7-rx-kfQ" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="68" id="d8w-5a-7OY"/>
                             <constraint firstItem="uD6-fp-Zho" firstAttribute="top" secondItem="AdW-dg-R04" secondAttribute="bottom" constant="8" id="feq-6c-Pjh"/>
                             <constraint firstItem="0al-yG-ALR" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="-294.5" id="iFr-ij-Sgf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uD6-fp-Zho" secondAttribute="trailing" constant="67" id="qDn-zc-xOG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c1a-5d-iUd" secondAttribute="trailing" constant="94" id="tYf-m1-MC4"/>
                             <constraint firstItem="0al-yG-ALR" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="vjl-XD-CAE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AdW-dg-R04" secondAttribute="trailing" constant="88" id="waS-Pb-Dy0"/>
                         </constraints>
@@ -66,8 +135,14 @@
                     <tabBarItem key="tabBarItem" title="Stopwatch" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="ResetButtonOne" destination="ksM-Fy-wnN" id="ll6-fh-37v"/>
+                        <outlet property="ResetButtonThree" destination="sPo-26-urz" id="mC0-Wc-nc9"/>
+                        <outlet property="ResetButtonTwo" destination="Xfb-hX-v4b" id="0sV-Ua-uF8"/>
                         <outlet property="StartButtonOne" destination="wg7-rx-kfQ" id="tKP-SM-VF2"/>
+                        <outlet property="StartButtonThree" destination="FW8-ne-3cy" id="Q1P-RZ-ayW"/>
+                        <outlet property="StartButtonTwo" destination="EFX-ed-w4v" id="GjE-Av-yfa"/>
                         <outlet property="StopwatchLabelOne" destination="uD6-fp-Zho" id="5Cz-9m-flh"/>
+                        <outlet property="StopwatchLabelThree" destination="bDj-Rf-zkN" id="S15-DY-e0G"/>
+                        <outlet property="StopwatchLabelTwo" destination="mxg-ih-pIM" id="gnh-He-d4N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -91,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
