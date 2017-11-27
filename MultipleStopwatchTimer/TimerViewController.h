@@ -8,7 +8,31 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TimerViewController : UIViewController
+@interface TimerViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+
+{
+    NSTimer *TimerOne;
+    int CountTimerOne;
+    BOOL RunningTimerOne;
+}
+
+//Timer One
+@property (weak, nonatomic) IBOutlet UIPickerView *PickerViewSelector;
+
+@property (weak, nonatomic) IBOutlet UILabel *TimerLabelOne;
+@property (weak, nonatomic) IBOutlet UIButton *StartButtonOne;
+@property (weak, nonatomic) IBOutlet UIButton *ResetButtonOne;
+
+- (IBAction)StartButtonOnePressed:(UIButton *)sender;
+- (IBAction)ResetButtonOnePressed:(UIButton *)sender;
+
+- (void) updateTimerOne;
+- (void) PauseTimerOne;
+- (void) ResetTimerOne;
+- (void) FinishedTimerOneAlarm;
+
+
+
 
 
 @end
