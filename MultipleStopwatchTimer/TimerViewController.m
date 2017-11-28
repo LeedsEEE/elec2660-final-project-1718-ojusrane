@@ -29,21 +29,43 @@
 
 
 - (IBAction)StartButtonOnePressed:(UIButton *)sender {
+    
 }
 
 - (IBAction)ResetButtonOnePressed:(UIButton *)sender {
 }
 
+- (void) InitialiseTimer{
+}
+
 - (void) updateTimerOne{
+    if (Seconds_TimerOne != 0){
+        Seconds_TimerOne --;
+    }
+    else if (Seconds_TimerOne == 0) {
+        Minutes_TimerOne --;
+        Seconds_TimerOne = 59;
+    }
+    else if(Minutes_TimerOne == 0 && Seconds_TimerOne == 0) {
+        Hours_TimerOne --;
+        Minutes_TimerOne = 59;
+        Seconds_TimerOne = 59;
+    }
+    self.TimerLabelOne.text = [NSString stringWithFormat: @"%02d:%02d:%02d",Hours_TimerOne,Minutes_TimerOne,Seconds_TimerOne];
 }
 
 - (void) PauseTimerOne{
 }
 
 - (void) ResetTimerOne{
+    
 }
 
 - (void) FinishedTimerOneAlarm{
+    if (Hours_TimerOne == 0 && Minutes_TimerOne == 0 && Seconds_TimerOne == 0) {
+        [TimerOne invalidate];
+        TimerOne = nil;
+    }
 }
 
 
@@ -56,7 +78,6 @@
             forComponent:(NSInteger)component{
     
     NSString *Number = [NSString stringWithFormat:@"%ld",row];
-    
     return Number;
     
 }

@@ -14,6 +14,11 @@
     NSTimer *TimerOne;
     int CountTimerOne;
     BOOL RunningTimerOne;
+    
+    int Hours_TimerOne;
+    int Minutes_TimerOne;
+    int Seconds_TimerOne;
+    
 }
 
 //Timer One
@@ -26,6 +31,7 @@
 - (IBAction)StartButtonOnePressed:(UIButton *)sender;
 - (IBAction)ResetButtonOnePressed:(UIButton *)sender;
 
+- (void) InitialiseTimer;
 - (void) updateTimerOne;
 - (void) PauseTimerOne;
 - (void) ResetTimerOne;
