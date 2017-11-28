@@ -19,6 +19,9 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.PickerViewSelector.delegate = self;
     self.PickerViewSelector.dataSource = self;
+    
+    self.TimerLabelOne.text = @"00:00:00";
+    RunningTimerOne = NO;
 }
 
 
@@ -27,37 +30,67 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark Actions
 
 - (IBAction)StartButtonOnePressed:(UIButton *)sender {
-    
+    self.PickerViewSelector.hidden = true;
+    if (RunningTimerOne ==NO) {
+        RunningTimerOne = YES;
+        [_StartButtonOne setTitle:@"Pause" forState:UIControlStateNormal];
+        
+        if (TimerOne == nil){
+            TimerOne = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimerOne) userInfo:nil repeats:YES];
+        }
+    }
+    else {
+        [self PauseTimerOne];
+    }
+    [self FinishedTimerOneAlarm];
 }
 
 - (IBAction)ResetButtonOnePressed:(UIButton *)sender {
+    [self ResetTimerOne];
+    
+    Hours_TimerOne = [self.PickerViewSelector selectedRowInComponent:0];
+    Minutes_TimerOne = [self.PickerViewSelector selectedRowInComponent:1];
+    Seconds_TimerOne = [self.PickerViewSelector selectedRowInComponent:2];
+
 }
 
-- (void) InitialiseTimer{
-}
+
+#pragma mark void Methods
 
 - (void) updateTimerOne{
     if (Seconds_TimerOne != 0){
         Seconds_TimerOne --;
-    }
-    else if (Seconds_TimerOne == 0) {
-        Minutes_TimerOne --;
-        Seconds_TimerOne = 59;
     }
     else if(Minutes_TimerOne == 0 && Seconds_TimerOne == 0) {
         Hours_TimerOne --;
         Minutes_TimerOne = 59;
         Seconds_TimerOne = 59;
     }
-    self.TimerLabelOne.text = [NSString stringWithFormat: @"%02d:%02d:%02d",Hours_TimerOne,Minutes_TimerOne,Seconds_TimerOne];
+    else if (Seconds_TimerOne == 0) {
+        Minutes_TimerOne --;
+        Seconds_TimerOne = 59;
+    }
+    self.TimerLabelOne.text = [NSString stringWithFormat: @"%02ld:%02ld:%02ld",Hours_TimerOne,Minutes_TimerOne,Seconds_TimerOne];
+    [self FinishedTimerOneAlarm];
 }
 
 - (void) PauseTimerOne{
+    RunningTimerOne = NO;
+    [TimerOne invalidate];
+    TimerOne = nil;
+    [_StartButtonOne setTitle:@"Start" forState:UIControlStateNormal];
 }
 
 - (void) ResetTimerOne{
+    self.PickerViewSelector.hidden = false;
+    [TimerOne invalidate];
+    TimerOne = nil;
+    self.TimerLabelOne.text = @"00:00:00";
+    [_StartButtonOne setTitle:@"Start" forState:UIControlStateNormal];
+    RunningTimerOne = NO;
     
 }
 
@@ -65,6 +98,9 @@
     if (Hours_TimerOne == 0 && Minutes_TimerOne == 0 && Seconds_TimerOne == 0) {
         [TimerOne invalidate];
         TimerOne = nil;
+        self.PickerViewSelector.hidden = false;
+        [_StartButtonOne setTitle:@"Start" forState:UIControlStateNormal];
+        RunningTimerOne = NO;
     }
 }
 
@@ -81,6 +117,18 @@
     return Number;
     
 }
+
+- (void)pickerView:(UIPickerView *)pickerView
+      didSelectRow:(NSInteger)row
+       inComponent:(NSInteger)component{
+    
+    Hours_TimerOne = [self.PickerViewSelector selectedRowInComponent:0];
+    Minutes_TimerOne = [self.PickerViewSelector selectedRowInComponent:1];
+    Seconds_TimerOne = [self.PickerViewSelector selectedRowInComponent:2];
+    
+}
+
+
 
 #pragma mark Picker view Data Source Methods
 
