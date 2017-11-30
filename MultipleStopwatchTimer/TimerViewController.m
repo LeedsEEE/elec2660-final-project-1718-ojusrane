@@ -20,7 +20,7 @@
     self.PickerViewSelector.delegate = self;
     self.PickerViewSelector.dataSource = self;
     
-    self.TimerLabelOne.text = @"00:00:00";
+    self.TimerLabelOne.hidden = TRUE;
     RunningTimerOne = NO;
     self.ResetButtonOne.hidden = TRUE;
 }
@@ -31,10 +31,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+//Timer One
 #pragma mark Actions
 
 - (IBAction)StartButtonOnePressed:(UIButton *)sender {
     self.PickerViewSelector.hidden = true;
+    self.TimerLabelOne.hidden = false;
     if (RunningTimerOne ==NO) {
         RunningTimerOne = YES;
         self.ResetButtonOne.hidden = FALSE;
@@ -87,6 +89,7 @@
 }
 
 - (void) ResetTimerOne{
+    self.TimerLabelOne.hidden = TRUE;
     self.ResetButtonOne.hidden = TRUE;
     self.PickerViewSelector.hidden = false;
     [TimerOne invalidate];
@@ -159,8 +162,18 @@ numberOfRowsInComponent:(NSInteger)component{
     
 }
 
+//Timer Two
+- (IBAction)StartButtonTwoPressed:(UIButton *)sender {
+}
+
+- (IBAction)ResetButtonTwoPressed:(UIButton *)sender {
+}
 
 
+//Timer Three
+- (IBAction)StartButtonThreePressed:(UIButton *)sender {
+}
 
-
+- (IBAction)ResetButtonThreePressed:(UIButton *)sender {
+}
 @end

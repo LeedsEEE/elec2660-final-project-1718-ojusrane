@@ -21,10 +21,20 @@
     self.StopwatchLabelOne.text = @"00:00:00:00";
     RunningStopwatchOne = NO;
     CountStopwatchOne = 0;
+    [_StartButtonOne setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+
     
     self.StopwatchLabelTwo.text = @"00:00:00:00";
     RunningStopwatchTwo = NO;
     CountStopwatchTwo = 0;
+    [_StartButtonTwo setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+
+    
+    self.StopwatchLabelThree.text = @"00:00:00:00";
+    RunningStopwatchThree = NO;
+    CountStopwatchThree = 0;
+    [_StartButtonThree setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+
     
 }
 
@@ -40,6 +50,7 @@
     if (RunningStopwatchOne == NO) {
         RunningStopwatchOne = YES;
         [_StartButtonOne setTitle:@"Stop" forState:UIControlStateNormal];
+        [_StartButtonOne setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         
         if (StopwatchOne == nil){
             StopwatchOne = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(updateStopwatchOne) userInfo:nil repeats:YES];
@@ -77,7 +88,8 @@
     RunningStopwatchOne = NO;
     [StopwatchOne invalidate];
     StopwatchOne = nil;
-    [_StartButtonOne setTitle:@"Start" forState:UIControlStateNormal];
+    [_StartButtonOne setTitle:@"Resume" forState:UIControlStateNormal];
+    [_StartButtonOne setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
 }
 
 
@@ -88,6 +100,7 @@
     if (RunningStopwatchTwo == NO) {
         RunningStopwatchTwo = YES;
         [_StartButtonTwo setTitle:@"Stop" forState:UIControlStateNormal];
+        [_StartButtonTwo setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         
         if (StopwatchTwo == nil){
             StopwatchTwo = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(updateStopwatchTwo) userInfo:nil repeats:YES];
@@ -125,7 +138,8 @@
     RunningStopwatchTwo = NO;
     [StopwatchTwo invalidate];
     StopwatchTwo = nil;
-    [_StartButtonTwo setTitle:@"Start" forState:UIControlStateNormal];
+    [_StartButtonTwo setTitle:@"Resume" forState:UIControlStateNormal];
+    [_StartButtonTwo setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
 }
 
 
@@ -135,6 +149,7 @@
     if (RunningStopwatchThree == NO) {
         RunningStopwatchThree = YES;
         [_StartButtonThree setTitle:@"Stop" forState:UIControlStateNormal];
+        [_StartButtonThree setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         
         if (StopwatchThree == nil){
             StopwatchThree = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(updateStopwatchThree) userInfo:nil repeats:YES];
@@ -171,7 +186,8 @@
     RunningStopwatchThree = NO;
     [StopwatchThree invalidate];
     StopwatchThree = nil;
-    [_StartButtonThree setTitle:@"Start" forState:UIControlStateNormal];
+    [_StartButtonThree setTitle:@"Resume" forState:UIControlStateNormal];
+    [_StartButtonThree setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
 }
 
 

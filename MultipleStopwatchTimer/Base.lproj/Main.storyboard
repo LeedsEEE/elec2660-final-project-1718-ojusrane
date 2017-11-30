@@ -66,8 +66,8 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="Xgl-yT-a1S"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFX-ed-w4v">
-                                <frame key="frameInset" minX="84" minY="362" width="34" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFX-ed-w4v">
+                                <frame key="frameInset" minX="84" minY="362" width="56" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
@@ -99,8 +99,8 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="rNC-8r-1Rg"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FW8-ne-3cy">
-                                <frame key="frameInset" minX="84" minY="533" width="34" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FW8-ne-3cy">
+                                <frame key="frameInset" minX="84" minY="533" width="56" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
@@ -186,25 +186,18 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XJu-Ho-E6m">
-                                                <frame key="frameInset" minX="8" minY="143" height="175" maxX="8"/>
+                                                <frame key="frameInset" minX="8" minY="102" height="175" maxX="8"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             </pickerView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Timer Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ggh-j8-7m9">
-                                                <frame key="frameInset" minX="104" minY="64" width="167" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdC-EL-BXf">
-                                                <frame key="frameInset" minX="111" minY="339" width="153" height="48"/>
+                                                <frame key="frameInset" minX="111" minY="165" width="153" height="48"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ea8-02-cuQ">
-                                                <frame key="frameInset" minX="104" minY="395" width="57" height="30"/>
+                                                <frame key="frameInset" minX="104" minY="271" width="57" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Start"/>
                                                 <connections>
@@ -212,13 +205,88 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFt-Bi-Qv3">
-                                                <frame key="frameInset" minX="232" minY="395" width="39" height="30"/>
+                                                <frame key="frameInset" minX="232" minY="271" width="39" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Reset"/>
                                                 <connections>
                                                     <action selector="ResetButtonOnePressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="FGF-2y-TgC"/>
                                                 </connections>
                                             </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Timer Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ggh-j8-7m9">
+                                                <frame key="frameInset" minX="111" minY="64" width="167" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Timer Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I8c-El-FeO">
+                                                <frame key="frameInset" minX="104" minY="351" width="167" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Timer Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eh2-Jw-Uce">
+                                                <frame key="frameInset" minX="104" minY="638" width="167" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HCQ-xc-UTA">
+                                                <frame key="frameInset" minX="8" minY="386" height="175" maxX="8"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
+                                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TjJ-6m-NcN">
+                                                <frame key="frameInset" minX="8" minY="676" height="175" maxX="8"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            </pickerView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="try-hh-AUY">
+                                                <frame key="frameInset" minX="111" minY="452" width="153" height="43"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzP-5h-3eL">
+                                                <frame key="frameInset" minX="115" minY="558" width="34" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Start"/>
+                                                <connections>
+                                                    <action selector="StartButtonTwoPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="ylP-Zr-AhP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h43-1r-ZFv">
+                                                <frame key="frameInset" minX="232" minY="558" width="39" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Reset"/>
+                                                <connections>
+                                                    <action selector="ResetButtonTwoPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="YrQ-9e-EZv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usE-vw-F3o">
+                                                <frame key="frameInset" minX="115" minY="840" width="34" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Start"/>
+                                                <connections>
+                                                    <action selector="StartButtonThreePressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="hZ7-Lg-izL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdD-mi-x7J">
+                                                <frame key="frameInset" minX="232" minY="840" width="39" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Reset"/>
+                                                <connections>
+                                                    <action selector="ResetButtonThreePressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Nme-W5-fB0"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fh-UY-z0T">
+                                                <frame key="frameInset" minX="111" minY="742" width="153" height="43"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -250,9 +318,20 @@
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="PickerViewSelector" destination="XJu-Ho-E6m" id="PFd-4C-IKc"/>
+                        <outlet property="PickerViewSelectorThree" destination="TjJ-6m-NcN" id="uov-i6-izR"/>
+                        <outlet property="PickerViewSelectorTwo" destination="HCQ-xc-UTA" id="nr2-Kt-bsz"/>
                         <outlet property="ResetButtonOne" destination="pFt-Bi-Qv3" id="iUN-rN-XeN"/>
+                        <outlet property="ResetButtonThree" destination="cdD-mi-x7J" id="xnc-Kt-HMJ"/>
+                        <outlet property="ResetButtonTwo" destination="h43-1r-ZFv" id="Wrs-ID-WQw"/>
                         <outlet property="StartButtonOne" destination="Ea8-02-cuQ" id="f3T-Zk-Lfc"/>
+                        <outlet property="StartButtonThree" destination="usE-vw-F3o" id="1UQ-vX-jwq"/>
+                        <outlet property="StartButtonTwo" destination="vzP-5h-3eL" id="ArV-IT-OwB"/>
                         <outlet property="TimerLabelOne" destination="AdC-EL-BXf" id="vPE-kq-clh"/>
+                        <outlet property="TimerLabelThree" destination="9fh-UY-z0T" id="00h-Ur-5Um"/>
+                        <outlet property="TimerLabelTwo" destination="try-hh-AUY" id="7sU-XI-Lcq"/>
+                        <outlet property="TimerTextFieldOne" destination="Ggh-j8-7m9" id="tfx-39-i5p"/>
+                        <outlet property="TimerTextFieldThree" destination="eh2-Jw-Uce" id="jPT-J6-2LJ"/>
+                        <outlet property="TimerTextFieldTwo" destination="I8c-El-FeO" id="D2F-IJ-SZd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
