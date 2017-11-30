@@ -195,4 +195,25 @@
     self.StopwatchLabelThree.text = @"00:00:00:00";
     
 }
+
+- (IBAction)backgroundPressed:(id)sender {
+    if ([self.StopwatchTextfieldOne isFirstResponder]){
+        [self.StopwatchTextfieldOne resignFirstResponder];
+    }
+    if ([self.StopwatchTextfieldTwo isFirstResponder]){
+        [self.StopwatchTextfieldTwo resignFirstResponder];
+    }
+    if ([self.StopwatchTextfieldThree isFirstResponder]){
+        [self.StopwatchTextfieldThree resignFirstResponder];
+    }
+    
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+
+
 @end

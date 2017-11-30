@@ -22,6 +22,7 @@
     
     self.TimerLabelOne.text = @"00:00:00";
     RunningTimerOne = NO;
+    self.ResetButtonOne.hidden = TRUE;
 }
 
 
@@ -36,6 +37,7 @@
     self.PickerViewSelector.hidden = true;
     if (RunningTimerOne ==NO) {
         RunningTimerOne = YES;
+        self.ResetButtonOne.hidden = FALSE;
         [_StartButtonOne setTitle:@"Pause" forState:UIControlStateNormal];
         
         if (TimerOne == nil){
@@ -81,10 +83,11 @@
     RunningTimerOne = NO;
     [TimerOne invalidate];
     TimerOne = nil;
-    [_StartButtonOne setTitle:@"Start" forState:UIControlStateNormal];
+    [_StartButtonOne setTitle:@"Resume" forState:UIControlStateNormal];
 }
 
 - (void) ResetTimerOne{
+    self.ResetButtonOne.hidden = TRUE;
     self.PickerViewSelector.hidden = false;
     [TimerOne invalidate];
     TimerOne = nil;
@@ -101,6 +104,7 @@
         self.PickerViewSelector.hidden = false;
         [_StartButtonOne setTitle:@"Start" forState:UIControlStateNormal];
         RunningTimerOne = NO;
+        self.ResetButtonOne.hidden = TRUE;
     }
 }
 

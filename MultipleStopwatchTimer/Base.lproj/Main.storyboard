@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -45,6 +45,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="3nL-xw-gDL"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxg-ih-pIM">
                                 <frame key="frameInset" minX="84" minY="296" width="208" height="48"/>
@@ -59,6 +62,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="Xgl-yT-a1S"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFX-ed-w4v">
                                 <frame key="frameInset" minX="84" minY="362" width="34" height="30"/>
@@ -89,6 +95,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="rNC-8r-1Rg"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FW8-ne-3cy">
                                 <frame key="frameInset" minX="84" minY="533" width="34" height="30"/>
@@ -131,6 +140,9 @@
                             <constraint firstItem="0al-yG-ALR" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="vjl-XD-CAE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AdW-dg-R04" secondAttribute="trailing" constant="88" id="waS-Pb-Dy0"/>
                         </constraints>
+                        <connections>
+                            <action selector="backgroundPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="idK-Nd-NfJ"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Stopwatch" image="first" id="acW-dT-cKf"/>
                     <connections>
@@ -143,6 +155,9 @@
                         <outlet property="StopwatchLabelOne" destination="uD6-fp-Zho" id="5Cz-9m-flh"/>
                         <outlet property="StopwatchLabelThree" destination="bDj-Rf-zkN" id="S15-DY-e0G"/>
                         <outlet property="StopwatchLabelTwo" destination="mxg-ih-pIM" id="gnh-He-d4N"/>
+                        <outlet property="StopwatchTextfieldOne" destination="AdW-dg-R04" id="W6m-AY-Sfu"/>
+                        <outlet property="StopwatchTextfieldThree" destination="fdu-wo-CLH" id="fUP-EW-noL"/>
+                        <outlet property="StopwatchTextfieldTwo" destination="ekO-IY-Lo0" id="gcp-E2-Paq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -189,7 +204,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ea8-02-cuQ">
-                                                <frame key="frameInset" minX="104" minY="395" width="46" height="30"/>
+                                                <frame key="frameInset" minX="104" minY="395" width="57" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Start"/>
                                                 <connections>
