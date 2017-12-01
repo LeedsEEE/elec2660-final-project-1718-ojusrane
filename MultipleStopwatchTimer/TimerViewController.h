@@ -86,6 +86,8 @@
 - (void) ResetTimerThree;
 - (void) FinishedTimerThreeAlarm;
 
+//Other Actions
+- (IBAction)backgroundPressed:(id)sender;
 //Other Method
 - (void) AlertNotification;
 

@@ -78,7 +78,7 @@
 }
 
 
-#pragma mark void Methods
+#pragma mark Timer One Methods
 - (void) InitialTimeSetOne{
     Hours_TimerOne = [self.PickerViewSelector selectedRowInComponent:0];
     Minutes_TimerOne = [self.PickerViewSelector selectedRowInComponent:1];
@@ -139,7 +139,26 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Timer Two
+#pragma mark Timer Two Actions
 - (IBAction)StartButtonTwoPressed:(UIButton *)sender {
     self.PickerViewSelectorTwo.hidden = true;
     self.TimerLabelTwo.hidden = false;
@@ -163,7 +182,7 @@
     [self InitialTimeSetTwo];
 }
 
-#pragma mark void Methods
+#pragma mark Timer Two Methods
 - (void) InitialTimeSetTwo{
     Hours_TimerTwo = [self.PickerViewSelectorTwo selectedRowInComponent:0];
     Minutes_TimerTwo = [self.PickerViewSelectorTwo selectedRowInComponent:1];
@@ -223,7 +242,25 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Timer Three
+#pragma mark Timer Three Actions
 - (IBAction)StartButtonThreePressed:(UIButton *)sender {
     self.PickerViewSelectorThree.hidden = true;
     self.TimerLabelThree.hidden = false;
@@ -247,7 +284,7 @@
     [self InitialTimeSetThree];
 }
 
-#pragma mark void Methods
+#pragma mark Timer Two Methods
 - (void) InitialTimeSetThree{
     Hours_TimerThree = [self.PickerViewSelectorThree selectedRowInComponent:0];
     Minutes_TimerThree = [self.PickerViewSelectorThree selectedRowInComponent:1];
@@ -305,6 +342,24 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #pragma mark Picker view Delegate Methods
 - (NSString *)pickerView:(UIPickerView *)pickerView
               titleForRow:(NSInteger)row
@@ -358,7 +413,7 @@ numberOfRowsInComponent:(NSInteger)component{
 
 #pragma mark Alert Notification Method
 - (void) AlertNotification{
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Time is up" message:@"Press OK to Dismiss" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Time is up" message:@"Press OK to dismiss" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *OKpressed = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){
         [alert dismissViewControllerAnimated:YES completion:nil]; [playAlarm stop];}];
     
@@ -369,4 +424,26 @@ numberOfRowsInComponent:(NSInteger)component{
     [alert addAction:OKpressed];
     [self presentViewController:alert animated:YES completion:nil];
 }
+
+
+#pragma mark Keyboard return key Method
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+
+#pragma mark Keyboard Background pressed Method
+- (IBAction)backgroundPressed:(id)sender {
+    if ([self.TimerTextFieldOne isFirstResponder]){
+        [self.TimerTextFieldOne resignFirstResponder];
+    }
+    if ([self.TimerTextFieldTwo isFirstResponder]){
+        [self.TimerTextFieldTwo resignFirstResponder];
+    }
+    if ([self.TimerTextFieldThree isFirstResponder]){
+        [self.TimerTextFieldThree resignFirstResponder];
+    }
+}
+
 @end

@@ -178,7 +178,7 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1X6-So-13m">
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIe-wy-IDg">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIe-wy-IDg" customClass="UIControl">
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOS-6a-gMf">
                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="29"/>
@@ -218,6 +218,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="TfY-P1-UOV"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Timer Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I8c-El-FeO">
                                                 <frame key="frameInset" minX="104" minY="351" width="167" height="30"/>
@@ -225,6 +228,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="qwh-SJ-t7d"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Timer Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eh2-Jw-Uce">
                                                 <frame key="frameInset" minX="104" minY="638" width="167" height="30"/>
@@ -232,6 +238,9 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="trp-mU-IiK"/>
+                                                </connections>
                                             </textField>
                                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HCQ-xc-UTA">
                                                 <frame key="frameInset" minX="8" minY="386" height="175" maxX="8"/>
@@ -294,6 +303,9 @@
                                             <constraint firstAttribute="height" constant="1000" id="qr4-Ef-tQ0"/>
                                             <constraint firstItem="QOS-6a-gMf" firstAttribute="centerX" secondItem="mIe-wy-IDg" secondAttribute="centerX" id="zgl-4U-GmF"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="backgroundPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="nfQ-3a-GXj"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <constraints>
