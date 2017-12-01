@@ -19,6 +19,10 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.PickerViewSelector.delegate = self;
     self.PickerViewSelector.dataSource = self;
+    self.PickerViewSelectorTwo.delegate = self;
+    self.PickerViewSelectorTwo.dataSource = self;
+    self.PickerViewSelectorThree.delegate = self;
+    self.PickerViewSelectorThree.dataSource = self;
     
     self.TimerLabelOne.hidden = TRUE;
     RunningTimerOne = NO;
@@ -108,6 +112,15 @@
         [_StartButtonOne setTitle:@"Start" forState:UIControlStateNormal];
         RunningTimerOne = NO;
         self.ResetButtonOne.hidden = TRUE;
+        self.TimerLabelOne.hidden = TRUE;
+        
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Time is up" message:@"Press OK to Dismiss" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *OKpressed = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        [alert addAction:OKpressed];
+        [self presentViewController:alert animated:YES completion:nil];
+        Hours_TimerOne = [self.PickerViewSelector selectedRowInComponent:0];
+        Minutes_TimerOne = [self.PickerViewSelector selectedRowInComponent:1];
+        Seconds_TimerOne = [self.PickerViewSelector selectedRowInComponent:2];
     }
 }
 
