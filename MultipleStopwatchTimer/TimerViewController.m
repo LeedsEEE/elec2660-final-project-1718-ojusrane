@@ -27,6 +27,10 @@
     self.TimerLabelOne.hidden = TRUE;
     RunningTimerOne = NO;
     self.ResetButtonOne.hidden = TRUE;
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"apple_ring" ofType:@".mp3"]; //https://www.zedge.net/ringtone/1001866/
+    NSURL *AlarmUrl = [NSURL fileURLWithPath:path];
+    playAlarm = [[AVAudioPlayer alloc]initWithContentsOfURL:AlarmUrl error:NULL];
 }
 
 
@@ -115,7 +119,13 @@
         self.TimerLabelOne.hidden = TRUE;
         
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Time is up" message:@"Press OK to Dismiss" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *OKpressed = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        UIAlertAction *OKpressed = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){
+        [alert dismissViewControllerAnimated:YES completion:nil]; [playAlarm stop];}];
+        
+        if (alert != nil) {
+            [playAlarm play];
+            playAlarm.numberOfLoops = -1; //infinite loop
+        }
         [alert addAction:OKpressed];
         [self presentViewController:alert animated:YES completion:nil];
         Hours_TimerOne = [self.PickerViewSelector selectedRowInComponent:0];

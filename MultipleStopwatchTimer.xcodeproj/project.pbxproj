@@ -16,6 +16,8 @@
 		4604F9911FC44F3F00C5D59F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4604F98F1FC44F3F00C5D59F /* LaunchScreen.storyboard */; };
 		4604F99C1FC44F3F00C5D59F /* MultipleStopwatchTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4604F99B1FC44F3F00C5D59F /* MultipleStopwatchTimerTests.m */; };
 		4604F9A71FC44F3F00C5D59F /* MultipleStopwatchTimerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4604F9A61FC44F3F00C5D59F /* MultipleStopwatchTimerUITests.m */; };
+		466264581FD1BB760011C758 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 466264571FD1BB760011C758 /* AVFoundation.framework */; };
+		4662645A1FD1BE150011C758 /* apple_ring.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 466264591FD1BE150011C758 /* apple_ring.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		4604F9A21FC44F3F00C5D59F /* MultipleStopwatchTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultipleStopwatchTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4604F9A61FC44F3F00C5D59F /* MultipleStopwatchTimerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultipleStopwatchTimerUITests.m; sourceTree = "<group>"; };
 		4604F9A81FC44F3F00C5D59F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		466264571FD1BB760011C758 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		466264591FD1BE150011C758 /* apple_ring.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = apple_ring.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				466264581FD1BB760011C758 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +93,7 @@
 				4604F99A1FC44F3F00C5D59F /* MultipleStopwatchTimerTests */,
 				4604F9A51FC44F3F00C5D59F /* MultipleStopwatchTimerUITests */,
 				4604F97C1FC44F3E00C5D59F /* Products */,
+				466264561FD1BB750011C758 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +128,7 @@
 		4604F97E1FC44F3E00C5D59F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				466264591FD1BE150011C758 /* apple_ring.mp3 */,
 				4604F97F1FC44F3E00C5D59F /* main.m */,
 			);
 			name = "Supporting Files";
@@ -143,6 +150,14 @@
 				4604F9A81FC44F3F00C5D59F /* Info.plist */,
 			);
 			path = MultipleStopwatchTimerUITests;
+			sourceTree = "<group>";
+		};
+		466264561FD1BB750011C758 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				466264571FD1BB760011C758 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4604F9911FC44F3F00C5D59F /* LaunchScreen.storyboard in Resources */,
+				4662645A1FD1BE150011C758 /* apple_ring.mp3 in Resources */,
 				4604F98E1FC44F3F00C5D59F /* Assets.xcassets in Resources */,
 				4604F98C1FC44F3E00C5D59F /* Main.storyboard in Resources */,
 			);

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AVFoundation/AVFoundation.h"
 
 @interface TimerViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
@@ -32,6 +33,8 @@
     long Hours_TimerThree;
     long Minutes_TimerThree;
     long Seconds_TimerThree;
+    
+    AVAudioPlayer *playAlarm;
 }
 
 //Timer One
