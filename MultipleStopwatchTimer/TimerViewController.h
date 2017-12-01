@@ -47,6 +47,7 @@
 - (IBAction)StartButtonOnePressed:(UIButton *)sender;
 - (IBAction)ResetButtonOnePressed:(UIButton *)sender;
 
+- (void) InitialTimeSetOne;
 - (void) updateTimerOne;
 - (void) PauseTimerOne;
 - (void) ResetTimerOne;
@@ -62,6 +63,7 @@
 - (IBAction)StartButtonTwoPressed:(UIButton *)sender;
 - (IBAction)ResetButtonTwoPressed:(UIButton *)sender;
 
+- (void) InitialTimeSetTwo;
 - (void) updateTimerTwo;
 - (void) PauseTimerTwo;
 - (void) ResetTimerTwo;
@@ -78,10 +80,14 @@
 - (IBAction)StartButtonThreePressed:(UIButton *)sender;
 - (IBAction)ResetButtonThreePressed:(UIButton *)sender;
 
+- (void) InitialTimeSetThree;
 - (void) updateTimerThree;
 - (void) PauseTimerThree;
 - (void) ResetTimerThree;
 - (void) FinishedTimerThreeAlarm;
+
+//Other Method
+- (void) AlertNotification;
 
 
 @end

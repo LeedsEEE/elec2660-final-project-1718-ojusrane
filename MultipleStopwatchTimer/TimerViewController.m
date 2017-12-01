@@ -17,17 +17,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    //Timer One viewDidLoad
     self.PickerViewSelector.delegate = self;
     self.PickerViewSelector.dataSource = self;
+    self.TimerLabelOne.hidden = TRUE;
+    self.ResetButtonOne.hidden = TRUE;
+    RunningTimerOne = NO;
+    
+    //Timer Two viewDidLoad
     self.PickerViewSelectorTwo.delegate = self;
     self.PickerViewSelectorTwo.dataSource = self;
+    self.TimerLabelTwo.hidden = TRUE;
+    self.ResetButtonTwo.hidden = TRUE;
+    RunningTimerTwo = NO;
+    
+    //Timer Three viewDidLoad
     self.PickerViewSelectorThree.delegate = self;
     self.PickerViewSelectorThree.dataSource = self;
+    self.TimerLabelThree.hidden = TRUE;
+    self.ResetButtonThree.hidden = TRUE;
+    RunningTimerThree = NO;
     
-    self.TimerLabelOne.hidden = TRUE;
-    RunningTimerOne = NO;
-    self.ResetButtonOne.hidden = TRUE;
-    
+    //Audio Initialization
     NSString *path = [[NSBundle mainBundle] pathForResource:@"apple_ring" ofType:@".mp3"]; //https://www.zedge.net/ringtone/1001866/
     NSURL *AlarmUrl = [NSURL fileURLWithPath:path];
     playAlarm = [[AVAudioPlayer alloc]initWithContentsOfURL:AlarmUrl error:NULL];
@@ -40,7 +52,7 @@
 }
 
 //Timer One
-#pragma mark Actions
+#pragma mark Timer One Actions
 
 - (IBAction)StartButtonOnePressed:(UIButton *)sender {
     self.PickerViewSelector.hidden = true;
@@ -62,15 +74,16 @@
 
 - (IBAction)ResetButtonOnePressed:(UIButton *)sender {
     [self ResetTimerOne];
-    
-    Hours_TimerOne = [self.PickerViewSelector selectedRowInComponent:0];
-    Minutes_TimerOne = [self.PickerViewSelector selectedRowInComponent:1];
-    Seconds_TimerOne = [self.PickerViewSelector selectedRowInComponent:2];
-
+    [self InitialTimeSetOne];
 }
 
 
 #pragma mark void Methods
+- (void) InitialTimeSetOne{
+    Hours_TimerOne = [self.PickerViewSelector selectedRowInComponent:0];
+    Minutes_TimerOne = [self.PickerViewSelector selectedRowInComponent:1];
+    Seconds_TimerOne = [self.PickerViewSelector selectedRowInComponent:2];
+}
 
 - (void) updateTimerOne{
     if (Seconds_TimerOne != 0){
@@ -117,28 +130,182 @@
         RunningTimerOne = NO;
         self.ResetButtonOne.hidden = TRUE;
         self.TimerLabelOne.hidden = TRUE;
-        
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Time is up" message:@"Press OK to Dismiss" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *OKpressed = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){
-        [alert dismissViewControllerAnimated:YES completion:nil]; [playAlarm stop];}];
-        
-        if (alert != nil) {
-            [playAlarm play];
-            playAlarm.numberOfLoops = -1; //infinite loop
-        }
-        [alert addAction:OKpressed];
-        [self presentViewController:alert animated:YES completion:nil];
-        Hours_TimerOne = [self.PickerViewSelector selectedRowInComponent:0];
-        Minutes_TimerOne = [self.PickerViewSelector selectedRowInComponent:1];
-        Seconds_TimerOne = [self.PickerViewSelector selectedRowInComponent:2];
+        [self InitialTimeSetOne];
+        [self AlertNotification];
     }
 }
 
 
 
 
-#pragma mark Picker view Delegate Methods
 
+//Timer Two
+- (IBAction)StartButtonTwoPressed:(UIButton *)sender {
+    self.PickerViewSelectorTwo.hidden = true;
+    self.TimerLabelTwo.hidden = false;
+    if (RunningTimerTwo ==NO) {
+        RunningTimerTwo = YES;
+        self.ResetButtonTwo.hidden = FALSE;
+        [_StartButtonTwo setTitle:@"Pause" forState:UIControlStateNormal];
+        
+        if (TimerTwo == nil){
+            TimerTwo = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimerTwo) userInfo:nil repeats:YES];
+        }
+    }
+    else {
+        [self PauseTimerTwo];
+    }
+    [self FinishedTimerTwoAlarm];
+}
+
+- (IBAction)ResetButtonTwoPressed:(UIButton *)sender {
+    [self ResetTimerTwo];
+    [self InitialTimeSetTwo];
+}
+
+#pragma mark void Methods
+- (void) InitialTimeSetTwo{
+    Hours_TimerTwo = [self.PickerViewSelectorTwo selectedRowInComponent:0];
+    Minutes_TimerTwo = [self.PickerViewSelectorTwo selectedRowInComponent:1];
+    Seconds_TimerTwo = [self.PickerViewSelectorTwo selectedRowInComponent:2];
+}
+
+- (void) updateTimerTwo{
+    if (Seconds_TimerTwo != 0){
+        Seconds_TimerTwo --;
+    }
+    else if(Minutes_TimerTwo == 0 && Seconds_TimerTwo == 0) {
+        Hours_TimerTwo --;
+        Minutes_TimerTwo = 59;
+        Seconds_TimerTwo = 59;
+    }
+    else if (Seconds_TimerTwo == 0) {
+        Minutes_TimerTwo --;
+        Seconds_TimerTwo = 59;
+    }
+    self.TimerLabelTwo.text = [NSString stringWithFormat: @"%02ld:%02ld:%02ld",Hours_TimerTwo,Minutes_TimerTwo,Seconds_TimerTwo];
+    [self FinishedTimerTwoAlarm];
+}
+
+- (void) PauseTimerTwo{
+    RunningTimerTwo = NO;
+    [TimerTwo invalidate];
+    TimerTwo = nil;
+    [_StartButtonTwo setTitle:@"Resume" forState:UIControlStateNormal];
+}
+
+- (void) ResetTimerTwo{
+    self.TimerLabelTwo.hidden = TRUE;
+    self.ResetButtonTwo.hidden = TRUE;
+    self.PickerViewSelectorTwo.hidden = false;
+    [TimerTwo invalidate];
+    TimerTwo = nil;
+    self.TimerLabelTwo.text = @"00:00:00";
+    [_StartButtonTwo setTitle:@"Start" forState:UIControlStateNormal];
+    RunningTimerTwo = NO;
+    
+}
+
+- (void) FinishedTimerTwoAlarm{
+    if (Hours_TimerTwo == 0 && Minutes_TimerTwo == 0 && Seconds_TimerTwo == 0) {
+        [TimerTwo invalidate];
+        TimerTwo = nil;
+        self.PickerViewSelectorTwo.hidden = false;
+        [_StartButtonTwo setTitle:@"Start" forState:UIControlStateNormal];
+        RunningTimerTwo = NO;
+        self.ResetButtonTwo.hidden = TRUE;
+        self.TimerLabelTwo.hidden = TRUE;
+        [self InitialTimeSetTwo];
+        [self AlertNotification];
+    }
+}
+
+
+
+
+//Timer Three
+- (IBAction)StartButtonThreePressed:(UIButton *)sender {
+    self.PickerViewSelectorThree.hidden = true;
+    self.TimerLabelThree.hidden = false;
+    if (RunningTimerThree ==NO) {
+        RunningTimerThree = YES;
+        self.ResetButtonThree.hidden = FALSE;
+        [_StartButtonThree setTitle:@"Pause" forState:UIControlStateNormal];
+        
+        if (TimerThree == nil){
+            TimerThree = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimerThree) userInfo:nil repeats:YES];
+        }
+    }
+    else {
+        [self PauseTimerThree];
+    }
+    [self FinishedTimerThreeAlarm];
+}
+
+- (IBAction)ResetButtonThreePressed:(UIButton *)sender {
+    [self ResetTimerThree];
+    [self InitialTimeSetThree];
+}
+
+#pragma mark void Methods
+- (void) InitialTimeSetThree{
+    Hours_TimerThree = [self.PickerViewSelectorThree selectedRowInComponent:0];
+    Minutes_TimerThree = [self.PickerViewSelectorThree selectedRowInComponent:1];
+    Seconds_TimerThree = [self.PickerViewSelectorThree selectedRowInComponent:2];
+}
+
+- (void) updateTimerThree{
+    if (Seconds_TimerThree != 0){
+        Seconds_TimerThree --;
+    }
+    else if(Minutes_TimerThree == 0 && Seconds_TimerThree == 0) {
+        Hours_TimerThree --;
+        Minutes_TimerThree = 59;
+        Seconds_TimerThree = 59;
+    }
+    else if (Seconds_TimerThree == 0) {
+        Minutes_TimerThree --;
+        Seconds_TimerThree = 59;
+    }
+    self.TimerLabelThree.text = [NSString stringWithFormat: @"%02ld:%02ld:%02ld",Hours_TimerThree,Minutes_TimerThree,Seconds_TimerThree];
+    [self FinishedTimerThreeAlarm];
+}
+
+- (void) PauseTimerThree{
+    RunningTimerThree = NO;
+    [TimerThree invalidate];
+    TimerThree = nil;
+    [_StartButtonThree setTitle:@"Resume" forState:UIControlStateNormal];
+}
+
+- (void) ResetTimerThree{
+    self.TimerLabelThree.hidden = TRUE;
+    self.ResetButtonThree.hidden = TRUE;
+    self.PickerViewSelectorThree.hidden = false;
+    [TimerThree invalidate];
+    TimerThree = nil;
+    self.TimerLabelThree.text = @"00:00:00";
+    [_StartButtonThree setTitle:@"Start" forState:UIControlStateNormal];
+    RunningTimerThree = NO;
+}
+
+- (void) FinishedTimerThreeAlarm{
+    if (Hours_TimerThree == 0 && Minutes_TimerThree == 0 && Seconds_TimerThree == 0) {
+        [TimerThree invalidate];
+        TimerThree = nil;
+        self.PickerViewSelectorThree.hidden = false;
+        [_StartButtonThree setTitle:@"Start" forState:UIControlStateNormal];
+        RunningTimerThree = NO;
+        self.ResetButtonThree.hidden = TRUE;
+        self.TimerLabelThree.hidden = TRUE;
+        [self InitialTimeSetThree];
+        [self AlertNotification];
+    }
+}
+
+
+
+#pragma mark Picker view Delegate Methods
 - (NSString *)pickerView:(UIPickerView *)pickerView
               titleForRow:(NSInteger)row
             forComponent:(NSInteger)component{
@@ -156,12 +323,16 @@
     Minutes_TimerOne = [self.PickerViewSelector selectedRowInComponent:1];
     Seconds_TimerOne = [self.PickerViewSelector selectedRowInComponent:2];
     
+    Hours_TimerTwo = [self.PickerViewSelectorTwo selectedRowInComponent:0];
+    Minutes_TimerTwo = [self.PickerViewSelectorTwo selectedRowInComponent:1];
+    Seconds_TimerTwo = [self.PickerViewSelectorTwo selectedRowInComponent:2];
+    
+    Hours_TimerThree = [self.PickerViewSelectorThree selectedRowInComponent:0];
+    Minutes_TimerThree = [self.PickerViewSelectorThree selectedRowInComponent:1];
+    Seconds_TimerThree = [self.PickerViewSelectorThree selectedRowInComponent:2];
 }
 
-
-
 #pragma mark Picker view Data Source Methods
-
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 3;
 }
@@ -185,18 +356,17 @@ numberOfRowsInComponent:(NSInteger)component{
     
 }
 
-//Timer Two
-- (IBAction)StartButtonTwoPressed:(UIButton *)sender {
-}
-
-- (IBAction)ResetButtonTwoPressed:(UIButton *)sender {
-}
-
-
-//Timer Three
-- (IBAction)StartButtonThreePressed:(UIButton *)sender {
-}
-
-- (IBAction)ResetButtonThreePressed:(UIButton *)sender {
+#pragma mark Alert Notification Method
+- (void) AlertNotification{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Time is up" message:@"Press OK to Dismiss" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *OKpressed = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){
+        [alert dismissViewControllerAnimated:YES completion:nil]; [playAlarm stop];}];
+    
+    if (alert != nil) {
+        [playAlarm play];
+        playAlarm.numberOfLoops = -1; //infinite loop
+    }
+    [alert addAction:OKpressed];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 @end

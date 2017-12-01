@@ -249,7 +249,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzP-5h-3eL">
-                                                <frame key="frameInset" minX="115" minY="558" width="34" height="30"/>
+                                                <frame key="frameInset" minX="104" minY="558" width="57" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Start"/>
                                                 <connections>
@@ -262,14 +262,6 @@
                                                 <state key="normal" title="Reset"/>
                                                 <connections>
                                                     <action selector="ResetButtonTwoPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="YrQ-9e-EZv"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usE-vw-F3o">
-                                                <frame key="frameInset" minX="115" minY="840" width="34" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Start"/>
-                                                <connections>
-                                                    <action selector="StartButtonThreePressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="hZ7-Lg-izL"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdD-mi-x7J">
@@ -287,6 +279,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usE-vw-F3o">
+                                                <frame key="frameInset" minX="111" minY="840" width="50" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Start"/>
+                                                <connections>
+                                                    <action selector="StartButtonThreePressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="hZ7-Lg-izL"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
