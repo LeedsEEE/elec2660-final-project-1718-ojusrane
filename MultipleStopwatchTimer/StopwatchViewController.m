@@ -66,6 +66,8 @@
     [self STOPStopwatchOne];
     CountStopwatchOne = 0;
     self.StopwatchLabelOne.text = @"00:00:00:00";
+    [_StartButtonOne setTitle:@"Start" forState:UIControlStateNormal];
+    [_StartButtonOne setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
     
 }
 
@@ -116,6 +118,8 @@
     [self STOPStopwatchTwo];
     CountStopwatchTwo = 0;
     self.StopwatchLabelTwo.text = @"00:00:00:00";
+    [_StartButtonTwo setTitle:@"Start" forState:UIControlStateNormal];
+    [_StartButtonTwo setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
 }
 
 
@@ -165,6 +169,8 @@
     [self STOPStopwatchThree];
     CountStopwatchThree = 0;
     self.StopwatchLabelThree.text = @"00:00:00:00";
+    [_StartButtonThree setTitle:@"Start" forState:UIControlStateNormal];
+    [_StartButtonThree setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
 }
 
 - (void) updateStopwatchThree{
@@ -201,15 +207,23 @@
     [self STOPStopwatchOne];
     CountStopwatchOne = 0;
     self.StopwatchLabelOne.text = @"00:00:00:00";
+    [_StartButtonOne setTitle:@"Start" forState:UIControlStateNormal];
+    [_StartButtonOne setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+
     
     [self STOPStopwatchTwo];
     CountStopwatchTwo = 0;
     self.StopwatchLabelTwo.text = @"00:00:00:00";
+    [_StartButtonTwo setTitle:@"Start" forState:UIControlStateNormal];
+    [_StartButtonTwo setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+
     
     [self STOPStopwatchThree];
     CountStopwatchThree = 0;
     self.StopwatchLabelThree.text = @"00:00:00:00";
-    
+    [_StartButtonThree setTitle:@"Start" forState:UIControlStateNormal];
+    [_StartButtonThree setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+
 }
 
 - (IBAction)backgroundPressed:(id)sender {

@@ -24,6 +24,7 @@
     self.TimerLabelOne.hidden = TRUE;
     self.ResetButtonOne.hidden = TRUE;
     RunningTimerOne = NO;
+    [_StartButtonOne setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
     
     //Timer Two viewDidLoad
     self.PickerViewSelectorTwo.delegate = self;
@@ -31,6 +32,7 @@
     self.TimerLabelTwo.hidden = TRUE;
     self.ResetButtonTwo.hidden = TRUE;
     RunningTimerTwo = NO;
+    [_StartButtonTwo setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
     
     //Timer Three viewDidLoad
     self.PickerViewSelectorThree.delegate = self;
@@ -38,6 +40,7 @@
     self.TimerLabelThree.hidden = TRUE;
     self.ResetButtonThree.hidden = TRUE;
     RunningTimerThree = NO;
+    [_StartButtonThree setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
     
     //Audio Initialization
     NSString *path = [[NSBundle mainBundle] pathForResource:@"apple_ring" ofType:@".mp3"]; //https://www.zedge.net/ringtone/1001866/
@@ -61,6 +64,8 @@
         RunningTimerOne = YES;
         self.ResetButtonOne.hidden = FALSE;
         [_StartButtonOne setTitle:@"Pause" forState:UIControlStateNormal];
+        [_StartButtonOne setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+
         
         if (TimerOne == nil){
             TimerOne = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimerOne) userInfo:nil repeats:YES];
@@ -107,6 +112,7 @@
     [TimerOne invalidate];
     TimerOne = nil;
     [_StartButtonOne setTitle:@"Resume" forState:UIControlStateNormal];
+    [_StartButtonOne setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
 }
 
 - (void) ResetTimerOne{
@@ -117,6 +123,7 @@
     TimerOne = nil;
     self.TimerLabelOne.text = @"00:00:00";
     [_StartButtonOne setTitle:@"Start" forState:UIControlStateNormal];
+    [_StartButtonOne setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
     RunningTimerOne = NO;
     
 }
@@ -127,6 +134,7 @@
         TimerOne = nil;
         self.PickerViewSelector.hidden = false;
         [_StartButtonOne setTitle:@"Start" forState:UIControlStateNormal];
+        [_StartButtonOne setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
         RunningTimerOne = NO;
         self.ResetButtonOne.hidden = TRUE;
         self.TimerLabelOne.hidden = TRUE;
@@ -166,6 +174,8 @@
         RunningTimerTwo = YES;
         self.ResetButtonTwo.hidden = FALSE;
         [_StartButtonTwo setTitle:@"Pause" forState:UIControlStateNormal];
+        [_StartButtonTwo setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+
         
         if (TimerTwo == nil){
             TimerTwo = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimerTwo) userInfo:nil repeats:YES];
@@ -211,6 +221,7 @@
     [TimerTwo invalidate];
     TimerTwo = nil;
     [_StartButtonTwo setTitle:@"Resume" forState:UIControlStateNormal];
+    [_StartButtonTwo setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
 }
 
 - (void) ResetTimerTwo{
@@ -221,6 +232,7 @@
     TimerTwo = nil;
     self.TimerLabelTwo.text = @"00:00:00";
     [_StartButtonTwo setTitle:@"Start" forState:UIControlStateNormal];
+    [_StartButtonTwo setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
     RunningTimerTwo = NO;
     
 }
@@ -231,6 +243,7 @@
         TimerTwo = nil;
         self.PickerViewSelectorTwo.hidden = false;
         [_StartButtonTwo setTitle:@"Start" forState:UIControlStateNormal];
+        [_StartButtonTwo setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
         RunningTimerTwo = NO;
         self.ResetButtonTwo.hidden = TRUE;
         self.TimerLabelTwo.hidden = TRUE;
@@ -268,6 +281,8 @@
         RunningTimerThree = YES;
         self.ResetButtonThree.hidden = FALSE;
         [_StartButtonThree setTitle:@"Pause" forState:UIControlStateNormal];
+        [_StartButtonThree setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+
         
         if (TimerThree == nil){
             TimerThree = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimerThree) userInfo:nil repeats:YES];
@@ -313,6 +328,7 @@
     [TimerThree invalidate];
     TimerThree = nil;
     [_StartButtonThree setTitle:@"Resume" forState:UIControlStateNormal];
+    [_StartButtonThree setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
 }
 
 - (void) ResetTimerThree{
@@ -323,6 +339,7 @@
     TimerThree = nil;
     self.TimerLabelThree.text = @"00:00:00";
     [_StartButtonThree setTitle:@"Start" forState:UIControlStateNormal];
+    [_StartButtonThree setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
     RunningTimerThree = NO;
 }
 
@@ -332,6 +349,7 @@
         TimerThree = nil;
         self.PickerViewSelectorThree.hidden = false;
         [_StartButtonThree setTitle:@"Start" forState:UIControlStateNormal];
+        [_StartButtonThree setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
         RunningTimerThree = NO;
         self.ResetButtonThree.hidden = TRUE;
         self.TimerLabelThree.hidden = TRUE;
