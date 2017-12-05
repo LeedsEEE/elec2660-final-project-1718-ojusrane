@@ -60,6 +60,7 @@
 - (IBAction)StartButtonOnePressed:(UIButton *)sender {
     self.PickerViewSelector.hidden = true;
     self.TimerLabelOne.hidden = false;
+    self.HoursMinutesSecondsLabelOne.hidden = true;
     if (RunningTimerOne ==NO) {
         RunningTimerOne = YES;
         self.ResetButtonOne.hidden = FALSE;
@@ -119,6 +120,7 @@
     self.TimerLabelOne.hidden = TRUE;
     self.ResetButtonOne.hidden = TRUE;
     self.PickerViewSelector.hidden = false;
+    self.HoursMinutesSecondsLabelOne.hidden = false;
     [TimerOne invalidate];
     TimerOne = nil;
     self.TimerLabelOne.text = @"00:00:00";
@@ -170,6 +172,7 @@
 - (IBAction)StartButtonTwoPressed:(UIButton *)sender {
     self.PickerViewSelectorTwo.hidden = true;
     self.TimerLabelTwo.hidden = false;
+    self.HoursMinutesSecondsLabelTwo.hidden = true;
     if (RunningTimerTwo ==NO) {
         RunningTimerTwo = YES;
         self.ResetButtonTwo.hidden = FALSE;
@@ -228,6 +231,7 @@
     self.TimerLabelTwo.hidden = TRUE;
     self.ResetButtonTwo.hidden = TRUE;
     self.PickerViewSelectorTwo.hidden = false;
+    self.HoursMinutesSecondsLabelTwo.hidden = false;
     [TimerTwo invalidate];
     TimerTwo = nil;
     self.TimerLabelTwo.text = @"00:00:00";
@@ -277,6 +281,7 @@
 - (IBAction)StartButtonThreePressed:(UIButton *)sender {
     self.PickerViewSelectorThree.hidden = true;
     self.TimerLabelThree.hidden = false;
+    self.HoursMinutesSecondsLabelThree.hidden = true;
     if (RunningTimerThree ==NO) {
         RunningTimerThree = YES;
         self.ResetButtonThree.hidden = FALSE;
@@ -299,7 +304,7 @@
     [self InitialTimeSetThree];
 }
 
-#pragma mark Timer Two Methods
+#pragma mark Timer Three Methods
 - (void) InitialTimeSetThree{
     Hours_TimerThree = [self.PickerViewSelectorThree selectedRowInComponent:0];
     Minutes_TimerThree = [self.PickerViewSelectorThree selectedRowInComponent:1];
@@ -335,6 +340,7 @@
     self.TimerLabelThree.hidden = TRUE;
     self.ResetButtonThree.hidden = TRUE;
     self.PickerViewSelectorThree.hidden = false;
+    self.HoursMinutesSecondsLabelThree.hidden = false;
     [TimerThree invalidate];
     TimerThree = nil;
     self.TimerLabelThree.text = @"00:00:00";

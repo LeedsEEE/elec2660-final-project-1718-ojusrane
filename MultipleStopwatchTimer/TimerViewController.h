@@ -43,6 +43,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *TimerLabelOne;
 @property (weak, nonatomic) IBOutlet UIButton *StartButtonOne;
 @property (weak, nonatomic) IBOutlet UIButton *ResetButtonOne;
+@property (weak, nonatomic) IBOutlet UILabel *HoursMinutesSecondsLabelOne;
+
 
 - (IBAction)StartButtonOnePressed:(UIButton *)sender;
 - (IBAction)ResetButtonOnePressed:(UIButton *)sender;
@@ -59,6 +61,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *TimerLabelTwo;
 @property (weak, nonatomic) IBOutlet UIButton *StartButtonTwo;
 @property (weak, nonatomic) IBOutlet UIButton *ResetButtonTwo;
+@property (weak, nonatomic) IBOutlet UILabel *HoursMinutesSecondsLabelTwo;
+
 
 - (IBAction)StartButtonTwoPressed:(UIButton *)sender;
 - (IBAction)ResetButtonTwoPressed:(UIButton *)sender;
@@ -76,6 +80,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *TimerLabelThree;
 @property (weak, nonatomic) IBOutlet UIButton *StartButtonThree;
 @property (weak, nonatomic) IBOutlet UIButton *ResetButtonThree;
+@property (weak, nonatomic) IBOutlet UILabel *HoursMinutesSecondsLabelThree;
+
 
 - (IBAction)StartButtonThreePressed:(UIButton *)sender;
 - (IBAction)ResetButtonThreePressed:(UIButton *)sender;
