@@ -89,5 +89,8 @@
 - (IBAction)backgroundPressed:(id)sender;
     // This action is used to hide the keyboard when the user touches the background of the screen will they have the keyboard shown
 
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollview;
+
 @end
 

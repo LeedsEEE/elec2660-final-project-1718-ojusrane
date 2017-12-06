@@ -49,16 +49,12 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="3nL-xw-gDL"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxg-ih-pIM">
-                                <frame key="frameInset" minX="84" minY="296" width="208" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxg-ih-pIM">
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Stopwatch name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ekO-IY-Lo0">
-                                <frame key="frameInset" minX="43" minY="259" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Stopwatch name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ekO-IY-Lo0">
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -66,32 +62,25 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="Xgl-yT-a1S"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFX-ed-w4v">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFX-ed-w4v">
                                 <frame key="frameInset" minX="84" minY="362" width="56" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="StartButtonTwoPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="aSI-xH-rUf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfb-hX-v4b">
-                                <frame key="frameInset" minX="248" minY="362" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfb-hX-v4b">
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="ResetButtonTwoPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="cY9-25-v15"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDj-Rf-zkN">
-                                <frame key="frameInset" minX="84" minY="467" width="208" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDj-Rf-zkN">
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Stopwatch name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdu-wo-CLH">
-                                <frame key="frameInset" minX="43" minY="430" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Stopwatch name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdu-wo-CLH">
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -99,17 +88,14 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="rNC-8r-1Rg"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FW8-ne-3cy">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FW8-ne-3cy">
                                 <frame key="frameInset" minX="84" minY="533" width="56" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="StartButtonThreePressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="sTj-mN-iw1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPo-26-urz">
-                                <frame key="frameInset" minX="248" minY="533" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPo-26-urz">
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="ResetButtonThreePressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="8FH-4y-S9D"/>
@@ -124,21 +110,41 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="AdW-dg-R04" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="27" id="3bh-CK-9zH"/>
-                            <constraint firstItem="uD6-fp-Zho" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="68" id="9Ae-og-btg"/>
+                            <constraint firstItem="fdu-wo-CLH" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="27" id="28s-Ug-eC7"/>
+                            <constraint firstItem="fdu-wo-CLH" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="111.5" id="72z-J6-9J8"/>
+                            <constraint firstItem="uD6-fp-Zho" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="-186" id="7AR-iX-UXe"/>
+                            <constraint firstItem="bDj-Rf-zkN" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="157.5" id="Amm-K1-sJP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AdW-dg-R04" secondAttribute="trailing" constant="28" id="ClJ-Kp-l35"/>
+                            <constraint firstItem="AdW-dg-R04" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="-230.5" id="Elo-tk-wHN"/>
                             <constraint firstItem="wg7-rx-kfQ" firstAttribute="top" secondItem="uD6-fp-Zho" secondAttribute="bottom" constant="25" id="FOw-U7-8Do"/>
-                            <constraint firstItem="AdW-dg-R04" firstAttribute="top" secondItem="0al-yG-ALR" secondAttribute="bottom" constant="31.5" id="HbN-hg-bKa"/>
+                            <constraint firstItem="bDj-Rf-zkN" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Fau-ql-kxL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xfb-hX-v4b" secondAttribute="trailing" constant="72" id="GMC-G3-JhB"/>
+                            <constraint firstItem="ekO-IY-Lo0" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="-59.5" id="GZ6-rE-bYx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sPo-26-urz" secondAttribute="trailing" constant="72" id="H9V-In-Hfr"/>
+                            <constraint firstItem="uD6-fp-Zho" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="HIj-eb-5K3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ksM-Fy-wnN" secondAttribute="trailing" constant="72" id="Hyy-Fv-hat"/>
+                            <constraint firstItem="FW8-ne-3cy" firstAttribute="top" secondItem="bDj-Rf-zkN" secondAttribute="bottom" constant="20.5" id="IoZ-br-Ykn"/>
                             <constraint firstItem="ksM-Fy-wnN" firstAttribute="top" secondItem="uD6-fp-Zho" secondAttribute="bottom" constant="25" id="Jfg-ub-Blx"/>
+                            <constraint firstItem="EFX-ed-w4v" firstAttribute="top" secondItem="mxg-ih-pIM" secondAttribute="bottom" constant="20.5" id="LxQ-Ng-m7b"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="c1a-5d-iUd" secondAttribute="bottom" constant="20" id="QlN-QF-4VY"/>
+                            <constraint firstItem="Xfb-hX-v4b" firstAttribute="top" secondItem="mxg-ih-pIM" secondAttribute="bottom" constant="20.5" id="Qsy-wL-NfF"/>
+                            <constraint firstItem="AdW-dg-R04" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="RKJ-2d-DLp"/>
+                            <constraint firstItem="mxg-ih-pIM" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="-13.5" id="Ttg-T4-KTB"/>
                             <constraint firstItem="c1a-5d-iUd" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="96" id="aE8-Mh-Z0W"/>
                             <constraint firstItem="wg7-rx-kfQ" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="68" id="d8w-5a-7OY"/>
-                            <constraint firstItem="uD6-fp-Zho" firstAttribute="top" secondItem="AdW-dg-R04" secondAttribute="bottom" constant="8" id="feq-6c-Pjh"/>
+                            <constraint firstItem="fdu-wo-CLH" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="daF-Np-Drk"/>
+                            <constraint firstItem="AdW-dg-R04" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="27" id="daV-RA-GdT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fdu-wo-CLH" secondAttribute="trailing" constant="28" id="g1A-Z9-QEp"/>
+                            <constraint firstItem="EFX-ed-w4v" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="68" id="g7J-EX-Z4T"/>
                             <constraint firstItem="0al-yG-ALR" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="-294.5" id="iFr-ij-Sgf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uD6-fp-Zho" secondAttribute="trailing" constant="67" id="qDn-zc-xOG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ekO-IY-Lo0" secondAttribute="trailing" constant="28" id="inh-ho-VTZ"/>
+                            <constraint firstItem="ekO-IY-Lo0" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="lz9-gX-aqG"/>
+                            <constraint firstItem="ekO-IY-Lo0" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="27" id="nDG-bo-mph"/>
+                            <constraint firstItem="FW8-ne-3cy" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="68" id="nh3-yQ-Ufd"/>
+                            <constraint firstItem="sPo-26-urz" firstAttribute="top" secondItem="bDj-Rf-zkN" secondAttribute="bottom" constant="20.5" id="r6h-NO-JLw"/>
+                            <constraint firstItem="mxg-ih-pIM" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="sQf-6U-zej"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c1a-5d-iUd" secondAttribute="trailing" constant="94" id="tYf-m1-MC4"/>
                             <constraint firstItem="0al-yG-ALR" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="vjl-XD-CAE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="AdW-dg-R04" secondAttribute="trailing" constant="28" id="waS-Pb-Dy0"/>
                         </constraints>
                         <connections>
                             <action selector="backgroundPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="idK-Nd-NfJ"/>
