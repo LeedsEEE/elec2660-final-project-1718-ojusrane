@@ -398,17 +398,26 @@
       didSelectRow:(NSInteger)row
        inComponent:(NSInteger)component{
     
-    Hours_TimerOne = [self.PickerViewSelector selectedRowInComponent:0];
-    Minutes_TimerOne = [self.PickerViewSelector selectedRowInComponent:1];
-    Seconds_TimerOne = [self.PickerViewSelector selectedRowInComponent:2];
+    _PickerViewSelector.tag = 1;
+    _PickerViewSelectorTwo.tag = 2;
+    _PickerViewSelectorThree.tag = 3;
     
-    Hours_TimerTwo = [self.PickerViewSelectorTwo selectedRowInComponent:0];
-    Minutes_TimerTwo = [self.PickerViewSelectorTwo selectedRowInComponent:1];
-    Seconds_TimerTwo = [self.PickerViewSelectorTwo selectedRowInComponent:2];
     
-    Hours_TimerThree = [self.PickerViewSelectorThree selectedRowInComponent:0];
-    Minutes_TimerThree = [self.PickerViewSelectorThree selectedRowInComponent:1];
-    Seconds_TimerThree = [self.PickerViewSelectorThree selectedRowInComponent:2];
+    if (pickerView.tag ==1){
+        Hours_TimerOne = [self.PickerViewSelector selectedRowInComponent:0];
+        Minutes_TimerOne = [self.PickerViewSelector selectedRowInComponent:1];
+        Seconds_TimerOne = [self.PickerViewSelector selectedRowInComponent:2];
+    }
+    else if (pickerView.tag ==2){
+        Hours_TimerTwo = [self.PickerViewSelectorTwo selectedRowInComponent:0];
+        Minutes_TimerTwo = [self.PickerViewSelectorTwo selectedRowInComponent:1];
+        Seconds_TimerTwo = [self.PickerViewSelectorTwo selectedRowInComponent:2];
+    }
+    else if (pickerView.tag ==3){
+        Hours_TimerThree = [self.PickerViewSelectorThree selectedRowInComponent:0];
+        Minutes_TimerThree = [self.PickerViewSelectorThree selectedRowInComponent:1];
+        Seconds_TimerThree = [self.PickerViewSelectorThree selectedRowInComponent:2];
+    }
 }
 
 #pragma mark Picker view Data Source Methods
