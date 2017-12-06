@@ -1,10 +1,11 @@
 //
-//  SecondViewController.h
+//  TimerViewController.h
 //  MultipleStopwatchTimer
 //
 //  Created by Ojus Rane [el16or] on 21/11/2017.
 //  Copyright © 2017 Ojus Rane [el16or]. All rights reserved.
 //
+//  In this view controller I have variable declarations, properties, actions and methods which can run 3 timers in my app at the same time. Please note, I am commenting on one set of timer code and not the other two sets because they will be duplicates of the one I am commenting on. Only the declared names will change on the two I'm not commenting on.
 
 #import <UIKit/UIKit.h>
 #import "AVFoundation/AVFoundation.h"

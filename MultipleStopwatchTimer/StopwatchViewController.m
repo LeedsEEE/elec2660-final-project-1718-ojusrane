@@ -1,5 +1,5 @@
 //
-//  FirstViewController.m
+//  StopwatchViewController.m
 //  MultipleStopwatchTimer
 //
 //  Created by Ojus Rane [el16or] on 21/11/2017.
@@ -19,9 +19,13 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.StopwatchLabelOne.text = @"00:00:00:00";
+        // Making sure the stopwatch label is initialised to 0 seconds
     RunningStopwatchOne = NO;
+        // Initialising the Boolean state to "NO". When the Boolean state is "YES", the Stopwatch will be running
     CountStopwatchOne = 0;
+        // This variable will be 0 initially, and will increment by 1 every millisecond when the stopwatch is running.
     [_StartButtonOne setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+        // I wanted to set the Start button colour to green, so we use the "setTitleColor" method, which you can find when manipulating a button element and use UIColor. UIColor has a list of colours that you can choose from to set the button colour. "forState:" is a method that gives the button a certain look. The default behaviour we tend to use is "UIControlStateNormal" which means the button will look like how it was and won't be highlighted or have a selected look to it.
 
     
     self.StopwatchLabelTwo.text = @"00:00:00:00";
@@ -50,38 +54,49 @@
     if (RunningStopwatchOne == NO) {
         RunningStopwatchOne = YES;
         [_StartButtonOne setTitle:@"Stop" forState:UIControlStateNormal];
+        // When the button is pressed, the title will change to stop and will be in its normal state ny setting it to "UIControlStateNormal"
         [_StartButtonOne setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         
         if (StopwatchOne == nil){
             StopwatchOne = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(updateStopwatchOne) userInfo:nil repeats:YES];
+            // Initially the NSTimer will be 0. If the NStimer = 0 when the start button is pressed, I am firing the NSTimer to perform a method every 10ms, hence the "scheduledTimerWithTimeInterval:0.01" . We mention the method using the "selector" section. So in this case I want the "updateStopwatchOne" to be performed every 10ms. I make it performed every 10ms by setting the "repeats" section to YES. The target will be "self" as this code is only being performed with this class only.
         }
     }
         else {
             [self STOPStopwatchOne];
         }
-}
+    }
+
 
 
 - (IBAction)ResetButtonOnePressed:(UIButton *)sender {
     [self STOPStopwatchOne];
     CountStopwatchOne = 0;
+    // When the reset button is pressed, the count integer will drop back down to zero so the timer will start back at 0 if started again
     self.StopwatchLabelOne.text = @"00:00:00:00";
+    // Setting the text back to 0 seconds
     [_StartButtonOne setTitle:@"Start" forState:UIControlStateNormal];
+    // Making the Start button go from Stop/Resume to "Start"
     [_StartButtonOne setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
-    
+    // Setting the colour back to its original state
 }
 
 - (void) updateStopwatchOne{
     CountStopwatchOne ++;
+    // NSTimer will perform this method every 10ms, so the CountStopwatchOne integer will incrememt by 1 every 10ms, and will set the Hours, Minutes, Seconds and Milliseconds and will pass this onto a label
     
     int Hours_StopwatchOne = floor(CountStopwatchOne/100/3600);
     int Minutes_StopwatchOne = floor(CountStopwatchOne/100/60);
     int Seconds_StopwatchOne = floor(CountStopwatchOne/100);
     int Milliseconds_StopwatchOne = CountStopwatchOne % 100;
+    // This variables set what is displayed in the stopwatch label. Since we set the time interval to 10ms, we need to divide the "CountStopwatchOne" integer by 100 for every seconds that goes by in the stopwatch. For the minutes section, we divide it by 100 and a further 60, since 1 minute is 60 seconds. For the hours sections, we divide it by 100, then a further 3600 since there is 3600 seconds in an hour.
+    // We use the floor function to work out our integers, which returns the greatest integer NOT greater than x. For example if the input = 2.25, then output = 2.00
+    // The modulo operater "%" gives us the remainder, when the integer is divided by 100
     
     if (Seconds_StopwatchOne >=60){
         Seconds_StopwatchOne = Seconds_StopwatchOne % 60;
     }
+    // When seconds is more that 60 seconds, it will revert back down to 0 seconds by getting the remainder
     
     self.StopwatchLabelOne.text = [NSString stringWithFormat:@"%02d:%02d:%02d:%02d", Hours_StopwatchOne,Minutes_StopwatchOne,Seconds_StopwatchOne,Milliseconds_StopwatchOne];
     
@@ -90,6 +105,7 @@
     RunningStopwatchOne = NO;
     [StopwatchOne invalidate];
     StopwatchOne = nil;
+    // When we Stop/Reset the timer, we use the invalidate method when we do not need the NSTimer to run, and we also set the NSTimer to nil so it is cleared from RAM and at a later time we can reuse the timer when we play the stopwatch again.
     [_StartButtonOne setTitle:@"Resume" forState:UIControlStateNormal];
     [_StartButtonOne setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
 }

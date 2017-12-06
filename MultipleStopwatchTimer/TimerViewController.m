@@ -1,5 +1,5 @@
 //
-//  SecondViewController.m
+//  TimerViewController.m
 //  MultipleStopwatchTimer
 //
 //  Created by Ojus Rane [el16or] on 21/11/2017.
