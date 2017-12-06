@@ -58,6 +58,7 @@
 #pragma mark Timer One Actions
 
 - (IBAction)StartButtonOnePressed:(UIButton *)sender {
+    if (Hours_TimerOne !=0 || Minutes_TimerOne !=0 || Seconds_TimerOne !=0){
     self.PickerViewSelector.hidden = true;
     self.TimerLabelOne.hidden = false;
     self.HoursMinutesSecondsLabelOne.hidden = true;
@@ -76,6 +77,7 @@
         [self PauseTimerOne];
     }
     [self FinishedTimerOneAlarm];
+}
 }
 
 - (IBAction)ResetButtonOnePressed:(UIButton *)sender {
@@ -170,6 +172,7 @@
 //Timer Two
 #pragma mark Timer Two Actions
 - (IBAction)StartButtonTwoPressed:(UIButton *)sender {
+    if (Hours_TimerTwo !=0 || Minutes_TimerTwo !=0 || Seconds_TimerTwo !=0){
     self.PickerViewSelectorTwo.hidden = true;
     self.TimerLabelTwo.hidden = false;
     self.HoursMinutesSecondsLabelTwo.hidden = true;
@@ -188,6 +191,7 @@
         [self PauseTimerTwo];
     }
     [self FinishedTimerTwoAlarm];
+}
 }
 
 - (IBAction)ResetButtonTwoPressed:(UIButton *)sender {
@@ -279,6 +283,7 @@
 //Timer Three
 #pragma mark Timer Three Actions
 - (IBAction)StartButtonThreePressed:(UIButton *)sender {
+    if (Hours_TimerThree !=0 || Minutes_TimerThree !=0 || Seconds_TimerThree !=0){
     self.PickerViewSelectorThree.hidden = true;
     self.TimerLabelThree.hidden = false;
     self.HoursMinutesSecondsLabelThree.hidden = true;
@@ -297,6 +302,7 @@
         [self PauseTimerThree];
     }
     [self FinishedTimerThreeAlarm];
+}
 }
 
 - (IBAction)ResetButtonThreePressed:(UIButton *)sender {

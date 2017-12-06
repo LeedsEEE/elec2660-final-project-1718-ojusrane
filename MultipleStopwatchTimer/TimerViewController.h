@@ -14,21 +14,18 @@
 {
     
     NSTimer *TimerOne;
-    int CountTimerOne;
     BOOL RunningTimerOne;
     long Hours_TimerOne;
     long Minutes_TimerOne;
     long Seconds_TimerOne;
     
     NSTimer *TimerTwo;
-    int CountTimerTwo;
     BOOL RunningTimerTwo;
     long Hours_TimerTwo;
     long Minutes_TimerTwo;
     long Seconds_TimerTwo;
     
     NSTimer *TimerThree;
-    int CountTimerThree;
     BOOL RunningTimerThree;
     long Hours_TimerThree;
     long Minutes_TimerThree;
