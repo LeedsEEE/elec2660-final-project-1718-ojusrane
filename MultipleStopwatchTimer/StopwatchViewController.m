@@ -58,7 +58,7 @@
         [_StartButtonOne setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         
         if (StopwatchOne == nil){
-            StopwatchOne = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(updateStopwatchOne) userInfo:nil repeats:YES];
+            StopwatchOne = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateStopwatchOne) userInfo:nil repeats:YES];
             // Initially the NSTimer will be 0. If the NStimer = 0 when the start button is pressed, I am firing the NSTimer to perform a method every 10ms, hence the "scheduledTimerWithTimeInterval:0.01" . We mention the method using the "selector" section. So in this case I want the "updateStopwatchOne" to be performed every 10ms. I make it performed every 10ms by setting the "repeats" section to YES. The target will be "self" as this code is only being performed with this class only.
         }
     }
@@ -85,10 +85,10 @@
     CountStopwatchOne ++;
     // NSTimer will perform this method every 10ms, so the CountStopwatchOne integer will incrememt by 1 every 10ms, and will set the Hours, Minutes, Seconds and Milliseconds and will pass this onto a label
     
-    int Hours_StopwatchOne = floor(CountStopwatchOne/100/3600);
-    int Minutes_StopwatchOne = floor(CountStopwatchOne/100/60);
-    int Seconds_StopwatchOne = floor(CountStopwatchOne/100);
-    int Milliseconds_StopwatchOne = CountStopwatchOne % 100;
+    int Hours_StopwatchOne = floor(CountStopwatchOne/10/3600);
+    int Minutes_StopwatchOne = floor(CountStopwatchOne/10/60);
+    int Seconds_StopwatchOne = floor(CountStopwatchOne/10);
+    int Milliseconds_StopwatchOne = CountStopwatchOne % 10;
     // This variables set what is displayed in the stopwatch label. Since we set the time interval to 10ms, we need to divide the "CountStopwatchOne" integer by 100 for every seconds that goes by in the stopwatch. For the minutes section, we divide it by 100 and a further 60, since 1 minute is 60 seconds. For the hours sections, we divide it by 100, then a further 3600 since there is 3600 seconds in an hour.
     // We use the floor function to work out our integers, which returns the greatest integer NOT greater than x. For example if the input = 2.25, then output = 2.00
     // The modulo operater "%" gives us the remainder, when the integer is divided by 100
@@ -98,7 +98,7 @@
     }
     // When seconds is more that 60 seconds, it will revert back down to 0 seconds by getting the remainder
     
-    self.StopwatchLabelOne.text = [NSString stringWithFormat:@"%02d:%02d:%02d:%02d", Hours_StopwatchOne,Minutes_StopwatchOne,Seconds_StopwatchOne,Milliseconds_StopwatchOne];
+    self.StopwatchLabelOne.text = [NSString stringWithFormat:@"%02d:%02d:%02d:%02d", Hours_StopwatchOne,Minutes_StopwatchOne,Seconds_StopwatchOne,Milliseconds_StopwatchOne*10];
     
 }
 - (void) STOPStopwatchOne{
@@ -121,7 +121,7 @@
         [_StartButtonTwo setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         
         if (StopwatchTwo == nil){
-            StopwatchTwo = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(updateStopwatchTwo) userInfo:nil repeats:YES];
+            StopwatchTwo = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateStopwatchTwo) userInfo:nil repeats:YES];
         }
     }
     else {
@@ -142,10 +142,10 @@
 - (void) updateStopwatchTwo{
     CountStopwatchTwo ++;
     
-    int Hours_StopwatchTwo = floor(CountStopwatchTwo/100/3600);
-    int Minutes_StopwatchTwo = floor(CountStopwatchTwo/100/60);
-    int Seconds_StopwatchTwo = floor(CountStopwatchTwo/100);
-    int Milliseconds_StopwatchTwo = CountStopwatchTwo % 100;
+    int Hours_StopwatchTwo = floor(CountStopwatchTwo/10/3600);
+    int Minutes_StopwatchTwo = floor(CountStopwatchTwo/10/60);
+    int Seconds_StopwatchTwo = floor(CountStopwatchTwo/10);
+    int Milliseconds_StopwatchTwo = CountStopwatchTwo % 10;
     
     if (Seconds_StopwatchTwo >=60){
         Seconds_StopwatchTwo = Seconds_StopwatchTwo % 60;
@@ -172,7 +172,7 @@
         [_StartButtonThree setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         
         if (StopwatchThree == nil){
-            StopwatchThree = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(updateStopwatchThree) userInfo:nil repeats:YES];
+            StopwatchThree = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateStopwatchThree) userInfo:nil repeats:YES];
         }
     }
     else {
@@ -192,10 +192,10 @@
 - (void) updateStopwatchThree{
     CountStopwatchThree ++;
     
-    int Hours_StopwatchThree = floor(CountStopwatchThree/100/3600);
-    int Minutes_StopwatchThree = floor(CountStopwatchThree/100/60);
-    int Seconds_StopwatchThree = floor(CountStopwatchThree/100);
-    int Milliseconds_StopwatchThree = CountStopwatchThree % 100;
+    int Hours_StopwatchThree = floor(CountStopwatchThree/10/3600);
+    int Minutes_StopwatchThree = floor(CountStopwatchThree/10/60);
+    int Seconds_StopwatchThree = floor(CountStopwatchThree/10);
+    int Milliseconds_StopwatchThree = CountStopwatchThree % 10;
     
     if (Seconds_StopwatchThree >=60){
         Seconds_StopwatchThree = Seconds_StopwatchThree % 60;

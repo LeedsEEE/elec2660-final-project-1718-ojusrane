@@ -71,6 +71,7 @@
         
         if (TimerOne == nil){
             TimerOne = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimerOne) userInfo:nil repeats:YES];
+            [[NSRunLoop currentRunLoop] addTimer:TimerOne forMode:NSRunLoopCommonModes];
         }
     }
     else {
@@ -185,6 +186,7 @@
         
         if (TimerTwo == nil){
             TimerTwo = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimerTwo) userInfo:nil repeats:YES];
+            [[NSRunLoop currentRunLoop] addTimer:TimerTwo forMode:NSRunLoopCommonModes];
         }
     }
     else {
@@ -296,6 +298,7 @@
         
         if (TimerThree == nil){
             TimerThree = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimerThree) userInfo:nil repeats:YES];
+            [[NSRunLoop currentRunLoop] addTimer:TimerThree forMode:NSRunLoopCommonModes];
         }
     }
     else {
