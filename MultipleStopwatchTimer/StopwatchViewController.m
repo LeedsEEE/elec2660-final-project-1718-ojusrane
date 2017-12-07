@@ -60,6 +60,8 @@
         if (StopwatchOne == nil){
             StopwatchOne = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateStopwatchOne) userInfo:nil repeats:YES];
             // Initially the NSTimer will be 0. If the NStimer = 0 when the start button is pressed, I am firing the NSTimer to perform a method every 10ms, hence the "scheduledTimerWithTimeInterval:0.01" . We mention the method using the "selector" section. So in this case I want the "updateStopwatchOne" to be performed every 10ms. I make it performed every 10ms by setting the "repeats" section to YES. The target will be "self" as this code is only being performed with this class only.
+            
+            // UPDATE: Unfortunately I have had to increase the time intervals from 10ms to 100ms, because NSTimer would fire properly on time, hence the stopwatch wasn't updating in real time. This means that the milliseconds seconds has less precision and can only update 100ms at a time. According to the apple documentation, the best timer interval the NSTimer class can handle is a value between 50 - 100 milliseconds
         }
     }
         else {
@@ -92,6 +94,8 @@
     // This variables set what is displayed in the stopwatch label. Since we set the time interval to 10ms, we need to divide the "CountStopwatchOne" integer by 100 for every seconds that goes by in the stopwatch. For the minutes section, we divide it by 100 and a further 60, since 1 minute is 60 seconds. For the hours sections, we divide it by 100, then a further 3600 since there is 3600 seconds in an hour.
     // We use the floor function to work out our integers, which returns the greatest integer NOT greater than x. For example if the input = 2.25, then output = 2.00
     // The modulo operater "%" gives us the remainder, when the integer is divided by 100
+    
+    //UPDATE: Have had to change from 100 to 10 because of the change in time interval
     
     if (Seconds_StopwatchOne >=60){
         Seconds_StopwatchOne = Seconds_StopwatchOne % 60;

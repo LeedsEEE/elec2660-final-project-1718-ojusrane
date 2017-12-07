@@ -7,6 +7,17 @@
 //
 //  In this view controller I have variable declarations, properties, actions and methods which can run 3 timers in my app at the same time. Please note, I am commenting on one set of timer code and not the other two sets because they will be duplicates of the one I am commenting on. Only the declared names will change on the two I'm not commenting on.
 
+//  Reference links that have helped me in this view controller
+//  Links:
+//  - https://www.youtube.com/watch?v=mYDWk3Oq3tg  (How to create Audio Player in iOS using Objective-C ?)
+//  - https://www.zedge.net/ringtone/1001866/ Audio file that plays when Timer is up
+//  - https://www.youtube.com/watch?v=-_LAQ_lKPm8 (How to display alerts in iOS 8 and Objective-C)
+//  - https://www.youtube.com/watch?v=LhhW3xqhCzg  (How To Create A Scroll View In Xcode 8 (Swift 3.0))
+//  - https://github.com/csweeney285/countdown-timer Example project on github made by csweeney285 that helped me understand how to make a countdown timer work.
+//  - https://png.icons8.com/?id=1112&size=280 Timer Icon for Tab and Storyboard
+//  - https://stackoverflow.com/posts/27042657/revisions Link that introduced me to pickerview.tag which helped me stop my 3 picker views having conflicts.
+//  - https://stackoverflow.com/questions/6752234/nstimer-not-firing Link that gave me an understanding on how to improve the performance of NSTimer
+
 #import <UIKit/UIKit.h>
 #import "AVFoundation/AVFoundation.h" // Needed so I can insert and play audio files that are in the project
 

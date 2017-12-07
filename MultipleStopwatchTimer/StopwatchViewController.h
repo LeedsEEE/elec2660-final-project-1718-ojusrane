@@ -7,6 +7,12 @@
 //
 //  In this view controller I have variable declarations, properties, actions and methods which can run 3 stopwatches in my app at the same time. Please note, I am commenting on one set of stopwatch code and not the other two sets because they will be duplicates of the one I am commenting on. Only the declared names will change on the two I'm not commenting on.
 
+    // Reference links that have helped me in this view controller
+    // Links:
+    // - Youtube link: https://www.youtube.com/watch?v=VKCB9IMvR68 ( iOS (Objective-C) Tutorial - How to Create a Stopwatch)
+    // Stopwatch Icon for Tab and Storyboard: https://png.icons8.com/stopwatch/ios7/1600
+
+
 #import <UIKit/UIKit.h>
 
 @interface StopwatchViewController : UIViewController <UITextFieldDelegate>
@@ -15,7 +21,7 @@
 #pragma mark Variable's declared
 {
     NSTimer *StopwatchOne;
-        // NSTimer is a built-in class used in my app to run code in repeated loops to whatever time interval I set it too. For every loop, it fires a specific message to the target object we set it too. In this case, I would like my time interval to be one millisecond, and target object to be "updateStopwatchOne" method. So it will perform the "updateStopwatchOne" method every one millisecond.
+        // NSTimer is a built-in class used in my app to run code in repeated loops to whatever time interval I set it too. For every loop, it fires a specific message to the target object we set it too. In this case, I would like my time interval to be one millisecond, and target object to be "updateStopwatchOne" method. So it will perform the "updateStopwatchOne" method every ten millisecond.
     int CountStopwatchOne;
         // I have declared an integer called "CountStopwatchOne" as this will play a part in updating the Stopwatch label in the Storyboard.
     BOOL RunningStopwatchOne;
