@@ -8,7 +8,7 @@
 //  In this view controller I have variable declarations, properties, actions and methods which can run 3 timers in my app at the same time. Please note, I am commenting on one set of timer code and not the other two sets because they will be duplicates of the one I am commenting on. Only the declared names will change on the two I'm not commenting on.
 
 #import <UIKit/UIKit.h>
-#import "AVFoundation/AVFoundation.h"
+#import "AVFoundation/AVFoundation.h" // Needed so I can insert and play audio files that are in the project
 
 @interface TimerViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 

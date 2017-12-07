@@ -51,7 +51,7 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"apple_ring" ofType:@".mp3"]; //https://www.zedge.net/ringtone/1001866/
     NSURL *AlarmUrl = [NSURL fileURLWithPath:path];
     playAlarm = [[AVAudioPlayer alloc]initWithContentsOfURL:AlarmUrl error:NULL];
-        // Need to initialise the audio in the app. I had to do some research in how to add audio to the view controller. We need to insert a file which is under the "Supported Files" Folder. Before we set the audio, we need to declare an NSString and NSURL. The play alarm will use NSURL declared name and NSURL will use the NSString variable name. 
+        // Need to initialise the audio in the app. I had to do some research in how to add audio to the view controller. We need to insert a file which is under the "Supported Files" Folder. Before we set the audio, we need to declare an NSString and NSURL. The play alarm will use NSURL declared name and the NSURL will use the NSString variable name. In the pathForResource section, we must quote the audio file name that we are going to use and in the ofType section, we must quote the type of audio file we are using i.e. In this case it is .mp3 file. In the NSURL, we use a method that mentions were our audio file is located. In this case it is "path", as this is the location set. The playalarm variable will need to allocate the AVAudioplayer and its initWithContentsofURL will be the URL variable I declared which is "AlarmUrl". The error will be NULL (CARRY ON WITH THIS EXPLANATION)
 }
 
 
@@ -65,6 +65,7 @@
 
 - (IBAction)StartButtonOnePressed:(UIButton *)sender {
     if (Hours_TimerOne !=0 || Minutes_TimerOne !=0 || Seconds_TimerOne !=0){
+        // It was neccesary to have this if statement because I did not want the alarm to play when somebody presses the start button when the timer is set to 0 hours, 0 minutes and 0 seconds
     self.PickerViewSelector.hidden = true;
     self.TimerLabelOne.hidden = false;
     self.HoursMinutesSecondsLabelOne.hidden = true;
