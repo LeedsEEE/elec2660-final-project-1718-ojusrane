@@ -31,14 +31,14 @@
 }
 
 
-#pragma mark Stopwatch 1 Outlet and Actions
+#pragma mark Stopwatch 1 Outlet, Actions and Methods
 //Stopwatch 1
 @property (weak, nonatomic) IBOutlet UITextField *StopwatchTextfieldOne;
     // I have inserted a Textfield outlet so I can implement some code that will hide the keyboard when the user presses the return key or touches the background.
 @property (weak, nonatomic) IBOutlet UILabel *StopwatchLabelOne;
     // The label outlet is used so it can be manipulated by code which will let the user keep track of the time.
 @property (weak, nonatomic) IBOutlet UIButton *StartButtonOne;
-    // Outlet used so we can change the text between "Start", "Pause", "Resume" and change the colour of the buttons aswell.
+    // Outlet used so we can change the text between "Start", "Stop", "Resume" and change the colour of the buttons aswell.
 @property (weak, nonatomic) IBOutlet UIButton *ResetButtonOne;
     // Added just in case I want this element to be manipulated by code.
 - (IBAction)StartButtonOnePressed:(UIButton *)sender;
@@ -53,7 +53,7 @@
     // This is a method used to stop the stopwatch when stopped or reset.
 
 
-#pragma mark Stopwatch 2 Outlet and Actions
+#pragma mark Stopwatch 2 Outlet, Actions and Methods
 //Stopwatch 2
 @property (weak, nonatomic) IBOutlet UITextField *StopwatchTextfieldTwo;
 @property (weak, nonatomic) IBOutlet UILabel *StopwatchLabelTwo;
@@ -66,7 +66,7 @@
 - (void) STOPStopwatchTwo;
 
 
-#pragma mark Stopwatch 3 Outlet and Actions
+#pragma mark Stopwatch 3 Outlet, Actions and Methods
 //Stopwatch 3
 @property (weak, nonatomic) IBOutlet UITextField *StopwatchTextfieldThree;
 @property (weak, nonatomic) IBOutlet UILabel *StopwatchLabelThree;
@@ -79,7 +79,7 @@
 - (void) STOPStopwatchThree;
 
 
-#pragma mark Reset all stopwatches Outlet and Action
+#pragma mark Reset all stopwatches Outlet, Actions and Methods
 - (IBAction)ResetAllStopwatchesButtonPressed:(UIButton *)sender;
     // I included an Reset all stopwatch button so the user could reset all 3 stopwatches with one button rather than resetting the stopwatches one at a time
 - (void) ResetAllStopwatches;
@@ -89,8 +89,6 @@
 - (IBAction)backgroundPressed:(id)sender;
     // This action is used to hide the keyboard when the user touches the background of the screen will they have the keyboard shown
 
-
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollview;
 
 @end
 
