@@ -21,10 +21,15 @@
     //Timer One viewDidLoad
     self.PickerViewSelector.delegate = self;
     self.PickerViewSelector.dataSource = self;
+     // Need to initialise my picker view's delegate and data source so it will display the data the picker view. It is equal to self since the delegate and data source is within this class
     self.TimerLabelOne.hidden = TRUE;
+    // I would like the timer label hidden when we are yet to set the time of the timer
     self.ResetButtonOne.hidden = TRUE;
+    // Reset button not required when timer is not set
     RunningTimerOne = NO;
+    // Initialise this boolean variable to NO. when timer is running, it will be YES.
     [_StartButtonOne setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+    //I want my start button to be green
     
     //Timer Two viewDidLoad
     self.PickerViewSelectorTwo.delegate = self;
@@ -46,6 +51,7 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"apple_ring" ofType:@".mp3"]; //https://www.zedge.net/ringtone/1001866/
     NSURL *AlarmUrl = [NSURL fileURLWithPath:path];
     playAlarm = [[AVAudioPlayer alloc]initWithContentsOfURL:AlarmUrl error:NULL];
+        // Need to initialise the audio in the app. I had to do some research in how to add audio to the view controller. We need to insert a file which is under the "Supported Files" Folder. Before we set the audio, we need to declare an NSString and NSURL. The play alarm will use NSURL declared name and NSURL will use the NSString variable name. 
 }
 
 

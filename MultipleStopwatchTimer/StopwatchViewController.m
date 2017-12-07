@@ -151,7 +151,7 @@
         Seconds_StopwatchTwo = Seconds_StopwatchTwo % 60;
     }
     
-    self.StopwatchLabelTwo.text = [NSString stringWithFormat:@"%02d:%02d:%02d:%02d", Hours_StopwatchTwo,Minutes_StopwatchTwo,Seconds_StopwatchTwo,Milliseconds_StopwatchTwo];
+    self.StopwatchLabelTwo.text = [NSString stringWithFormat:@"%02d:%02d:%02d:%02d", Hours_StopwatchTwo,Minutes_StopwatchTwo,Seconds_StopwatchTwo,Milliseconds_StopwatchTwo*10];
     
 }
 - (void) STOPStopwatchTwo{
@@ -201,7 +201,7 @@
         Seconds_StopwatchThree = Seconds_StopwatchThree % 60;
     }
     
-    self.StopwatchLabelThree.text = [NSString stringWithFormat:@"%02d:%02d:%02d:%02d", Hours_StopwatchThree,Minutes_StopwatchThree,Seconds_StopwatchThree,Milliseconds_StopwatchThree];
+    self.StopwatchLabelThree.text = [NSString stringWithFormat:@"%02d:%02d:%02d:%02d", Hours_StopwatchThree,Minutes_StopwatchThree,Seconds_StopwatchThree,Milliseconds_StopwatchThree*10];
     
 }
 - (void) STOPStopwatchThree{
